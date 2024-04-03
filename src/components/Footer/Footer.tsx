@@ -1,4 +1,3 @@
-import React from 'react'
 import { Logo1 } from '../../assets';
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";

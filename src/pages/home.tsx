@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Searches } from '../components'
 
 const Home = () => {

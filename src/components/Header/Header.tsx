@@ -1,10 +1,9 @@
-import React,{useState} from 'react';
+import {useState} from 'react';
 import {Logo1} from '../../assets'
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MdClose } from 'react-icons/md';
 import { CgMenuRight } from 'react-icons/cg';
-import { MdMenu } from "react-icons/md";
 
 const links = [
   {link:`/`,label:`why us`},
@@ -49,7 +48,7 @@ const Header = () => {
       {/* large screen */}
       <div className='hidden md:flex items-center gap-8 capitalize font-medium text-lg'>
         {links?.map((item,i)=>(
-          <Link to={item.link}>{item.label}</Link>
+          <Link key={i} to={item.link}>{item.label}</Link>
         ))}
         <Link className='bg-main text-white px-5 py-1 xl:px-10 xl:py-2.5 rounded-full text-base uppercase' to={'/login'}>Login</Link>
       </div>

@@ -8,7 +8,6 @@ import {
   createBrowserRouter,
   RouterProvider,
   Outlet,
-  useLocation,
 } from "react-router-dom";
 
 // Components
@@ -16,10 +15,10 @@ import {Header, Footer, Preloader } from "./components";
 
 // Pages
 const Home = lazy(() => import("./pages/home"));
-const Whyus = lazy(() => import("./pages/why-us"));
-const Blog = lazy(() => import("./pages/blog"));
-const Faq = lazy(() => import("./pages/faq"));
-const Contact = lazy(() => import("./pages/contact"));
+// const Whyus = lazy(() => import("./pages/why-us"));
+// const Blog = lazy(() => import("./pages/blog"));
+// const Faq = lazy(() => import("./pages/faq"));
+// const Contact = lazy(() => import("./pages/contact"));
 
 const Layout = () => {
   return (
