@@ -5,38 +5,29 @@
 
 @font-face{
     src: url(assets/fonts/Poppins-Light.woff2) format(woff2);
-    font-family: "Poppins-light";
+    font-family: "Satoshi-light";
     font-display: swap;
   }
   
   @font-face{
     src: url(assets/fonts/Poppins-Regular.woff2) format(woff2);
-    font-family: "Poppins-Regular";
+    font-family: "Satoshi-Regular";
     font-display: swap;
   }
   
   @font-face{
     src: url(assets/fonts/Poppins-Medium.woff2) format(woff2);
-    font-family: "Poppins-Medium";
+    font-family: "Satoshi-Medium";
     font-display: swap;
   }
   
-  @font-face{
-    src: url(assets/fonts/Poppins-SemiBold.woff2) format(woff2);
-    font-family: "Poppins-SemiBold";
-    font-display: swap;
-  }
   
   @font-face{
     src: url(assets/fonts/Poppins-Bold.woff2) format(woff2);
-    font-family: "Poppins-Bold";
+    font-family: "Satoshi-Bold";
     font-display: swap;
   }
-  @font-face{
-    src: url(assets/fonts/poppins-Extrabold.woff2) format(woff2);
-    font-family: "Poppins-Extrabold";
-    font-display: swap;
-  }
+
   
   *{
     margin: 0;
@@ -93,7 +84,7 @@
   body{
     background-color: #fff;
     color: black;
-    font-family: "Poppins-Regular", sans-serif;
+    font-family: "Satoshi-Regular", sans-serif;
     overflow-x: hidden;
   }
   

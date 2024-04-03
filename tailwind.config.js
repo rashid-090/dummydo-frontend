@@ -18,12 +18,10 @@ module.exports = {
        'main': 'rgb(0, 163, 154)',
      },
      fontFamily: {
-      light:['Poppins-light', 'sans-serif'],
-      normal:['Poppins-Regular', 'sans-serif'],
-      medium:['Poppins-Medium', 'sans-serif'],
-      semibold:['Poppins-SemiBold', 'sans-serif'],
-      bold:['Poppins-Bold', 'sans-serif'],
-      extrabold:['Poppins-Extrabold', 'sans-serif'],
+      light:['Satoshi-light', 'sans-serif'],
+      normal:['Satoshi-Regular', 'sans-serif'],
+      medium:['Satoshi-Medium', 'sans-serif'],
+      bold:['Satoshi-Bold', 'sans-serif'],
      },
      backgroundImage: {
       // 'banner-bg1': "url('./assets/images/home/3sea1.jpg')",
