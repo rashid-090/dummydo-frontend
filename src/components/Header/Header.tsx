@@ -43,14 +43,14 @@ const Header = () => {
     },
   };
   return (
-    <nav className='w-11/12 lg:w-10/12 mx-auto flex items-center justify-between h-16 lg:h-20  xl:h-28'>
+    <nav className='w-11/12  xl:w-9/12 mx-auto flex items-center justify-between h-16 lg:h-20  xl:h-28'>
       <span className='flex items-center gap-2'><img className='h-6 w-8 lg:h-10 lg:w-12 object-contain' src={Logo1} alt="logo" /><h4 className='text-main text-lg lg:text-2xl font-semibold'>DummyFree</h4></span>
       {/* large screen */}
       <div className='hidden md:flex items-center gap-8 capitalize font-medium text-lg'>
         {links?.map((item,i)=>(
           <Link key={i} to={item.link}>{item.label}</Link>
         ))}
-        <Link className='bg-main text-white px-5 py-1 xl:px-10 xl:py-2.5 rounded-full text-base uppercase' to={'/login'}>Login</Link>
+        <Link className='bg-main text-white px-5 py-1 xl:px-10 xl:py-2.5 rounded-full text-base capitalize' to={'/login'}>Login</Link>
       </div>
       <CgMenuRight onClick={toggleMenu} className="text-main text-3xl block md:hidden" />
       {/* small */}
@@ -96,7 +96,7 @@ const Header = () => {
                     </div>
                   );
                 })}
-                <Link onClick={()=> setOpen(false)} className='bg-white text-main px-12 py-2 rounded-full text-xl font-medium uppercase' to={'/login'}>Login</Link>
+                <Link onClick={()=> setOpen(false)} className='bg-white text-main px-12 py-2 rounded-full text-xl font-medium capitalize' to={'/login'}>Login</Link>
               </motion.div>
             </motion.div>
           )}

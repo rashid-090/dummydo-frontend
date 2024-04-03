@@ -4,26 +4,26 @@
 
 
 @font-face{
-    src: url(assets/fonts/Poppins-Light.woff2) format(woff2);
+    src: url(assets/fonts/Satoshi-Light.woff2) format(woff2);
     font-family: "Satoshi-light";
     font-display: swap;
   }
   
   @font-face{
-    src: url(assets/fonts/Poppins-Regular.woff2) format(woff2);
+    src: url(assets/fonts/Satoshi-Regular.woff2) format(woff2);
     font-family: "Satoshi-Regular";
     font-display: swap;
   }
   
   @font-face{
-    src: url(assets/fonts/Poppins-Medium.woff2) format(woff2);
+    src: url(assets/fonts//Satoshi-Medium.woff2) format(woff2);
     font-family: "Satoshi-Medium";
     font-display: swap;
   }
   
   
   @font-face{
-    src: url(assets/fonts/Poppins-Bold.woff2) format(woff2);
+    src: url(assets/fonts/Satoshi-Bold.woff2) format(woff2);
     font-family: "Satoshi-Bold";
     font-display: swap;
   }
@@ -89,3 +89,8 @@
   }
   
   
+  .shades{
+    -webkit-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 33px 0px rgba(155, 155, 155, 0.30);
+  }

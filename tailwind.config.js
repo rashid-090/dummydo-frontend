@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     screens: {
             'xs':'250px',
-            'sm': '370px',
+            'sm': '376px',
             'md': '768px',
             'lg': '1024px',
             'xl': '1280px',
@@ -15,7 +15,8 @@ module.exports = {
        
    extend: {
      colors:{
-       'main': 'rgb(0, 163, 154)',
+       'main': 'rgb(240, 88, 43)',
+       'bgshade':'#f5f8fa'
      },
      fontFamily: {
       light:['Satoshi-light', 'sans-serif'],
