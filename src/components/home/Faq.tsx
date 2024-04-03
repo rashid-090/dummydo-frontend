@@ -21,8 +21,7 @@ const FaqData=[
   },
 ]
 
-
-const FAQItem = ({ question, answer }) => {
+const FAQItem = ( {question, answer} ) => {
   const [isOpen, setIsOpen] = useState(false);
 
 
