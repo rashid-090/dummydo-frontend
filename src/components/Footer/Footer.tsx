@@ -2,26 +2,27 @@ import { Logo1 } from '../../assets';
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import {globe} from '../../assets'
+import {globe,gif1} from '../../assets'
 
 const Footer = () => {
   return (
     <main className='w-11/12 xl:w-9/12 mx-auto mt-10'>
       {/* get in touch */}
-      <div className='bg-bgshade flex md:flex-row md:items-center justify-between  p-5 lg:p-10 rounded-2xl md:rounded-3xl lg:rounded-[3rem]'>
-       <div className='space-y-7'>
-        <h3 className='text-main text-2xl lg:text-4xl font-semibold'>Further Questions?</h3>
-        <div className='text-base lg:text-xl font-medium lg:space-y-1 text-gray-500'>
-          <p className=''>Our team will clear your doubts.</p>
-          <p className=''>We ensure a quick response.</p>
-        </div>
-          <div className='space-y-1'>
-            <p className='text-base lg:text-2xl font-semibold text-gray-500'>Email Us:</p>
-            <p className='text-main text-2xl font-medium'>info@dummyfree.com</p>
+      <div className='bg-bgshade group flex md:flex-row md:items-center gap-x-10 justify-between  p-5 lg:p-10 rounded-2xl md:rounded-3xl lg:rounded-[3rem]'>
+       <div className='space-y-5 flex-1'>
+          <div>
+            <h1 className='text-main text-2xl lg:text-4xl font-semibold'>For more enquiry</h1>
+            {/* <h3 className='text-xl font-semibold capitalize'>For more enquiry</h3>/ */}
           </div>
+          <form className='w-full flex flex-col gap-y-2 '>
+            <input className='w-full outline-none bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="text" placeholder='Name' />
+            <input className='w-full outline-none bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="tel" placeholder='Mobile' />
+            <input className='w-full outline-none bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="email" placeholder='Email' />
+            <button className='bg-main  w-fit text-white px-14 py-2 rounded-full mt-3' type='submit'>Send</button>
+          </form>
        </div>
-       <div className='hidden md:block'>
-        <img className='h-40 w-40 xl:h-60 xl:w-60 hover:rotate-6 duration-200' src={globe} alt="globe" />
+       <div className='hidden md:flex justify-center flex-1'>
+        <img className='h-40 w-40 xl:h-60 xl:w-60 duration-500 group-hover:rotate-12' src={gif1} alt="globe" />
        </div>
       </div>
       {/* footer */}

@@ -1,5 +1,5 @@
 
-import { Searches,DummyDiffrence, CustomerSay, FAQ, Banner } from '../components'
+import { Searches,DummyDiffrence, CustomerSay, FAQ, Banner, Plans } from '../components'
 
 const Home = () => {
   return (
@@ -12,6 +12,10 @@ const Home = () => {
       </div>
       {/*  */}
      <DummyDiffrence/>
+     {/*  */}
+     <div className="w-11/12 xl:w-9/12 mx-auto h-1 bg-gradient-to-r from-main to-[#d8634000]"></div>
+     {/*  */}
+     <Plans/>
      {/*  */}
      <CustomerSay/>
      {/*  */}

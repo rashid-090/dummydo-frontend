@@ -97,7 +97,7 @@ function App() {
       clearTimeout(timerId);
     };
 
-  });
+  }, [] );
 
 
   return (

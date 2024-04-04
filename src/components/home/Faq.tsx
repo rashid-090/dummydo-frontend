@@ -58,7 +58,7 @@ const FAQItem = ( {question, answer} ) => {
 const Faq = () => {
   return (
   <div className="w-11/12  xl:w-9/12 mx-auto py-10 xl:py-20">
-    <div className="grid grid-cols-1 md:grid-cols-3">
+    <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5">
       <div className="flex items-center justify-center md:justify-start">
         <h1 className='text-2xl lg:text-4xl font-bold capitalize text-center md:text-left text-main'>Frequently Asked Questions</h1>
       </div>
