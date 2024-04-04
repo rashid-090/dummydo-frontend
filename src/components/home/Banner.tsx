@@ -11,7 +11,7 @@ const Banner = () => {
                 loop
                 muted
             >
-                {/* <source src={vid2} type="video/mp4" /> */}
+                <source src={vid1} type="video/mp4" />
                 <source src={vid2} type="video/mp4" />
             </video>
         </div>
