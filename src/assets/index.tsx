@@ -8,7 +8,11 @@ import avt2 from './images/svg/avt2.svg'
 import avt3 from './images/svg/avt3.svg'
 import globe from './images/svg/glob.svg'
 
+import vid1 from './video/dummyfree1.webm'
+import vid2 from './video/dummyfree2.mov'
+
 export {
+    vid1,vid2,
     verifiedsvg,contactsvg,securesvg,locationsvg,globe,
     avt1,avt2,avt3,
     Logo1

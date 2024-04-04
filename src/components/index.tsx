@@ -5,6 +5,7 @@ import Searches from "./Searchs";
 import DummyDiffrence from "./home/DummyDifference";
 import CustomerSay from "./home/CustomersSay";
 import FAQ from "./home/Faq";
+import Banner from "./home/Banner";
 
 export {
     Header,
@@ -13,5 +14,6 @@ export {
     Searches,
     DummyDiffrence,
     CustomerSay,
-    FAQ
+    FAQ,
+    Banner
 }

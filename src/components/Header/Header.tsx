@@ -43,7 +43,7 @@ const Header = () => {
     },
   };
   return (
-    <nav className='w-11/12  xl:w-9/12 mx-auto flex items-center justify-between h-16 lg:h-20  xl:h-28'>
+    <nav className='w-11/12  xl:w-9/12 mx-auto flex items-center justify-between h-16 lg:h-20  xl:h-28 z-50'>
       <span className='flex items-center gap-2'><img className='h-6 w-8 lg:h-10 lg:w-12 object-contain' src={Logo1} alt="logo" /><h4 className='text-main text-lg lg:text-2xl font-semibold'>DummyFree</h4></span>
       {/* large screen */}
       <div className='hidden md:flex items-center gap-8 capitalize font-medium text-lg'>

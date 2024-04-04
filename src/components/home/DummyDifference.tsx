@@ -27,7 +27,7 @@ const DummyDifference = () => {
   return (
     <>
      <div className='w-11/12 xl:w-9/12 mx-auto py-10 xl:py-20'>
-        <h1 className='text-2xl lg:text-4xl font-bold capitalize text-center text-main'>The DummyFree Difference</h1>
+        <h1 className='text-2xl lg:text-4xl font-bold capitalize text-center text-main'>why DummyFree</h1>
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 pt-10 xl:pt-16'>
             {Diffdata?.map((dt,i)=>(
               <div className='hover:shadow-xl duration-150 border-2 rounded-3xl xl:py-16 p-5 flex flex-col gap-y-3 lg:gap-y-5 items-center text-center' key={i}>
