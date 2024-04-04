@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <main>
       {/* banner */}
-      <div className='w-11/12 xl:w-9/12 mx-auto flex flex-col gap-y-10 '>
+      <div className='w-11/12 xl:w-9/12 mx-auto flex flex-col gap-y-5 xl:gap-y-10 '>
        <Banner/>
         {/* Searches */}
         <Searches/>

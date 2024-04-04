@@ -9,6 +9,7 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
+import notificationSound from './assets/mp3/flighttone.mp3'; // Import your notification sound file
 
 // Components
 import {Header, Footer, Preloader } from "./components";
@@ -82,6 +83,21 @@ function App() {
       }, 500); // Delay content visibility by 500 milliseconds to allow fade-out effect
     }
   }, [isLoading]);
+
+  useEffect(() => {
+    const playNotificationSound = () => {
+      const audio = new Audio(notificationSound);
+      audio.play();
+    };
+
+    const timerId = setTimeout(playNotificationSound, 5000); // 5000 milliseconds = 5 seconds
+
+    // Clean up the timer when the component unmounts or when the timer is no longer needed
+    return () => {
+      clearTimeout(timerId);
+    };
+
+  }, []);
 
 
   return (

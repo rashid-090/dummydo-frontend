@@ -4,9 +4,9 @@ import {vid1,vid2} from '../../assets'
 const Banner = () => {
   return (
     <>
-     <div className="relative w-full overflow-hidden z-10">
+     <div className="relative w-full grid place-items-center overflow-hidden z-10">
             <video
-                className="w-full h-full object-cover "
+                className="md:w-[70%] h-full object-cover "
                 autoPlay
                 loop
                 muted
