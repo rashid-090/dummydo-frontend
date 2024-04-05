@@ -117,7 +117,7 @@ const SearchPage = () => {
             {/* Flights */}
             {activeTab === 'flight' && (
                 <>
-                   <div className='flex gap-10'>
+                   <div className='flex flex-col md:flex-row gap-y-2 gap-x-10'>
                      {/* toolge */}
                 
                      <div className='flex gap-2 items-center h-14 capitalize text-sm font-medium'>
@@ -142,7 +142,7 @@ const SearchPage = () => {
                      {/* toolge */}
                      {/* Passenger */}
 
-                            <div className="flex items-center gap-2 selection:bg-none">
+                            <div className="flex items-center gap-2 selection:bg-none pb-5 md:pb-0">
                                 <span className="text-black font-medium px-1 text-center">Adults:</span>
                                 <AiFillMinusCircle className={`text-main text-xl  ${passengerCount <= 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`} onClick={decreasePassengerCount}/>
                                     <span className="text-gray-600 font-medium  text-center">{passengerCount}</span>
@@ -198,7 +198,7 @@ const SearchPage = () => {
               {/* Hotels */}
             {activeTab === 'fighthotel' && (
                   <>
-                  <div className='flex gap-10'>
+                  <div className='flex flex-col md:flex-row gap-y-2 gap-x-10'>
                     {/* toolge */}
                
                     <div className='flex gap-2 items-center h-14 capitalize text-sm font-medium'>
@@ -223,7 +223,7 @@ const SearchPage = () => {
                     {/* toolge */}
                     {/* Passenger */}
 
-                           <div className="flex items-center gap-2 selection:bg-none">
+                           <div className="flex items-center gap-2 selection:bg-none pb-5 md:pb-0">
                                <span className="text-black font-medium px-1 text-center">Adults:</span>
                                <AiFillMinusCircle className={`text-main text-xl  ${passengerCount <= 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`} onClick={decreasePassengerCount}/>
                                    <span className="text-gray-600 font-medium  text-center">{passengerCount}</span>
