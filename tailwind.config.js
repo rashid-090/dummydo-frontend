@@ -15,7 +15,7 @@ module.exports = {
        
    extend: {
      colors:{
-       'main': 'rgb(240, 88, 43)',
+       'main': 'rgb(104, 17, 67)',
        'bgshade':'#f5f8fa'
      },
      fontFamily: {

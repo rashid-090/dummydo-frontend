@@ -16,6 +16,7 @@ import {Header, Footer, Preloader } from "./components";
 
 // Pages
 const Home = lazy(() => import("./pages/home"));
+const Booking = lazy(() => import("./pages/booking"));
 // const Whyus = lazy(() => import("./pages/why-us"));
 // const Blog = lazy(() => import("./pages/blog"));
 // const Faq = lazy(() => import("./pages/faq"));
@@ -54,6 +55,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Preloader/>}>
             <Home/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/booking",
+        element: (
+          <Suspense fallback={<Preloader/>}>
+            <Booking/>
           </Suspense>
         ),
       },

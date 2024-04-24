@@ -11,6 +11,7 @@ import { DateRange } from 'react-date-range';
 import { format } from "date-fns";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
+import { Link } from 'react-router-dom';
 const options = [
     { value: 'Calicut', label: 'Calicut' },
     { value: 'Dubai', label: 'Dubai' },
@@ -87,11 +88,11 @@ const SearchPage = () => {
           ...base,
         //   border: state.isFocused ? 0 : 0,
         
-          borderColor: state.isFocused ? '#f0582b' : '#f0582b',
+          borderColor: state.isFocused ? '#8e2157' : '#8e2157',
           // This line disable the blue border
           boxShadow: state.isFocused ? 0 : 0,
           "&:hover": {
-            borderColor: state.isFocused ? '#f0582b' : '#f0582b',
+            borderColor: state.isFocused ? '#8e2157' : '#8e2157',
           }
         })
       };
@@ -125,10 +126,10 @@ const SearchPage = () => {
                                 <Switch
                                 onChange={handleCheck}
                                 checked={checked}
-                                onColor="#fddfd6"
-                                onHandleColor="#e4542a"
-                                offColor="#fddfd6"
-                                offHandleColor="#e4542a"
+                                onColor="#cfcfcf"
+                                onHandleColor="#671042"
+                                offColor="#cfcfcf"
+                                offHandleColor="#671042"
                                 boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
                                 activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
                                 height={20}
@@ -190,7 +191,7 @@ const SearchPage = () => {
                             />
                             )}
                     </div>
-                    <button className='bg-main w-full md:w-32 rounded-full h-9 grid place-items-center text-white'><IoArrowForwardSharp/></button>
+                    <Link to={'/booking'} className='bg-main w-full md:w-32 rounded-full h-9 grid place-items-center text-white'><IoArrowForwardSharp/></Link>
                    </div>
                 </form>
                 </>
@@ -206,10 +207,10 @@ const SearchPage = () => {
                                <Switch
                                onChange={handleCheck}
                                checked={checked}
-                               onColor="#fddfd6"
-                               onHandleColor="#e4542a"
-                               offColor="#fddfd6"
-                               offHandleColor="#e4542a"
+                               onColor="#cfcfcf"
+                               onHandleColor="#671042"
+                               offColor="#cfcfcf"
+                               offHandleColor="#671042"
                                boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
                                activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
                                height={20}
@@ -271,7 +272,7 @@ const SearchPage = () => {
                            />
                            )}
                    </div>
-                   <button className='bg-main w-full md:w-32 rounded-full h-9 grid place-items-center text-white'><IoArrowForwardSharp/></button>
+                   <Link to={'/booking'} className='bg-main w-full md:w-32 rounded-full h-9 grid place-items-center text-white'><IoArrowForwardSharp/></Link>
                   </div>
                </form>
                </>

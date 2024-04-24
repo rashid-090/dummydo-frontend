@@ -8,16 +8,16 @@ const Footer = () => {
   return (
     <main className='w-11/12 xl:w-9/12 mx-auto mt-10'>
       {/* get in touch */}
-      <div className='bg-bgshade group flex md:flex-row md:items-center gap-x-10 justify-between  p-5 lg:p-10 rounded-2xl md:rounded-3xl lg:rounded-[3rem]'>
+      <div className='bg-white shadow-xl shadow-gray-200 border group flex md:flex-row md:items-center gap-x-10 justify-between  p-5 lg:p-10 rounded-2xl md:rounded-3xl lg:rounded-[3rem]'>
        <div className='space-y-5 flex-1'>
           <div>
             <h1 className='text-main text-2xl lg:text-4xl font-semibold'>For more enquiry</h1>
             {/* <h3 className='text-xl font-semibold capitalize'>For more enquiry</h3>/ */}
           </div>
           <form className='w-full flex flex-col gap-y-2 '>
-            <input className='w-full outline-none bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="text" placeholder='Name' />
-            <input className='w-full outline-none bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="tel" placeholder='Mobile' />
-            <input className='w-full outline-none bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="email" placeholder='Email' />
+            <input className='w-full outline-none rounded-lg bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="text" placeholder='Name' />
+            <input className='w-full outline-none rounded-lg bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="tel" placeholder='Mobile' />
+            <input className='w-full outline-none rounded-lg bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="email" placeholder='Email' />
             <button className='bg-main  w-fit text-white px-14 py-2 rounded-full mt-3' type='submit'>Send</button>
           </form>
        </div>
