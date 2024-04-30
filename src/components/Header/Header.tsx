@@ -4,15 +4,28 @@ import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MdClose } from 'react-icons/md';
 import { CgMenuRight } from 'react-icons/cg';
+import Modal from '../Modal/track';
 
 const links = [
   {link:`/`,label:`why us`},
   {link:`/`,label:`blog`},
   {link:`/`,label:`FAQ's`},
   {link:`/`,label:`contact`},
+  {link:`/auth/login`,label:`login`},
 ]
 
 const Header = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   const [open, setOpen] = useState(false);
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -46,13 +59,16 @@ const Header = () => {
     <nav className='w-11/12  xl:w-9/12 mx-auto flex items-center justify-between h-16 lg:h-20  xl:h-28 z-50'>
       <Link to={'/'}><span className='flex items-center gap-2'><img className='h-6 w-8 lg:h-10 lg:w-12 object-contain' src={Logo1} alt="logo" /><h4 className='text-main text-lg lg:text-2xl font-semibold'>DummyFree</h4></span></Link>
       {/* large screen */}
-      <div className='hidden md:flex items-center gap-8 capitalize font-medium text-lg'>
-        {links?.map((item,i)=>(
+      <div className='hidden lg:flex items-center gap-8 capitalize font-medium text-lg'>
+        {/* {links?.map((item,i)=>(
           <Link key={i} to={item.link}>{item.label}</Link>
-        ))}
-        <Link className='bg-main text-white px-5 py-1 xl:px-10 xl:py-2.5 rounded-full text-base capitalize' to={'/login'}>Login</Link>
+        ))} */}
+        <button className='bg-main text-white px-5 py-1 xl:px-10 xl:py-2.5 rounded-full text-base capitalize' onClick={openModal}>Track Ticket</button>
       </div>
-      <CgMenuRight onClick={toggleMenu} className="text-main text-3xl block md:hidden" />
+     <div className='flex lg:hidden items-center gap-4'>
+        <button onClick={openModal} className='bg-main text-white px-5 py-1.5 rounded-full text-sm font-medium capitalize ' >Track Ticket</button>
+        {/* <CgMenuRight onClick={toggleMenu} className="text-main text-3xl " /> */}
+     </div>
       {/* small */}
       <AnimatePresence>
           {open && (
@@ -96,11 +112,11 @@ const Header = () => {
                     </div>
                   );
                 })}
-                <Link onClick={()=> setOpen(false)} className='bg-white text-main px-12 py-2 rounded-full text-xl font-medium capitalize' to={'/login'}>Login</Link>
               </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
+        <Modal isOpen={isModalOpen} onClose={closeModal} />
     </nav>
   )
 }

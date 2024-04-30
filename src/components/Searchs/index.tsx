@@ -118,7 +118,7 @@ const SearchPage = () => {
             {/* Flights */}
             {activeTab === 'flight' && (
                 <>
-                   <div className='flex flex-col md:flex-row gap-y-2 gap-x-10'>
+                   <div className='flex flex-col lg:flex-row gap-y-2 gap-x-10'>
                      {/* toolge */}
                 
                      <div className='flex gap-2 items-center h-14 capitalize text-sm font-medium'>
@@ -147,11 +147,27 @@ const SearchPage = () => {
                                 <span className="text-black font-medium px-1 text-center">Adults:</span>
                                 <AiFillMinusCircle className={`text-main text-xl  ${passengerCount <= 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`} onClick={decreasePassengerCount}/>
                                     <span className="text-gray-600 font-medium  text-center">{passengerCount}</span>
-                                <AiFillPlusCircle className={`text-main text-xl cursor-pointer ${passengerCount >= 10 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`} onClick={increasePassengerCount}/>
+                                <AiFillPlusCircle className={`text-main text-xl  ${passengerCount >= 10 ? 'cursor-pointer opacity-50' : 'cursor-pointer'}`} onClick={increasePassengerCount}/>
                                  
                             </div>
                     
                      {/* Passenger */}
+                     {/* Processing speed */}
+                        <div className='flex items-center gap-3 text-black font-medium'>
+                          <p>Processing Speed:</p>
+                          <div className='flex items-center gap-3 '>
+                            <div className='flex items-center'>
+                              <label>Fast:</label>
+                              <Checkbox  sx={{color:'#681143','&.Mui-checked': {color: '#681143',}}} required/>
+                            </div>
+                            <div className='flex items-center'>
+                              <label>Slow:</label>
+                              <Checkbox  sx={{color:'#681143','&.Mui-checked': {color: '#681143',}}} required/>
+                            </div>
+                           
+                          </div>
+                        </div>
+                     {/* Processing speed */}
                    </div>
                     <form className='w-full'>
                     
@@ -233,6 +249,22 @@ const SearchPage = () => {
                            </div>
                    
                     {/* Passenger */}
+                      {/* Processing speed */}
+                      <div className='flex items-center gap-3 text-black font-medium'>
+                          <p>Processing Speed:</p>
+                          <div className='flex items-center gap-3 '>
+                            <div className='flex items-center'>
+                              <label>Fast:</label>
+                              <Checkbox  sx={{color:'#681143','&.Mui-checked': {color: '#681143',}}} required/>
+                            </div>
+                            <div className='flex items-center'>
+                              <label>Slow:</label>
+                              <Checkbox  sx={{color:'#681143','&.Mui-checked': {color: '#681143',}}} required/>
+                            </div>
+                           
+                          </div>
+                        </div>
+                     {/* Processing speed */}
                   </div>
                    <form className='w-full'>
                    

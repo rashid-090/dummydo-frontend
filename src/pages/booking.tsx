@@ -74,8 +74,8 @@ const MultiStepForm = () => {
                   <div>
                     <label className='flex items-center'>Type of Use<span className='pl-2 text-[7px] text-red-500'><FaStarOfLife/></span></label>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-5 py-3'>
-                        <div className='flex gap-3 items-center'><input type="radio" className='w-5 h-5' name='visa'/><label>For Visa Application</label></div>
-                        <div className='flex gap-3 items-center'><input type="radio" className='w-5 h-5' name='visa'/><label>For Travel Return Proof</label></div>
+                        <div className='flex gap-3 items-center'><input type="radio" className='w-5 h-5 cursor-pointer' name='visa'/><label>For Visa Application</label></div>
+                        <div className='flex gap-3 items-center'><input type="radio" className='w-5 h-5 cursor-pointer' name='visa'/><label>For Travel Return Proof</label></div>
                     </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 md:gap-y-10  font-normal capitalize text-base">

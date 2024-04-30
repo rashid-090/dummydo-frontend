@@ -8,6 +8,7 @@ import {
   createBrowserRouter,
   RouterProvider,
   Outlet,
+  useLocation,
 } from "react-router-dom";
 import notificationSound from './assets/mp3/flighttone.mp3'; // Import your notification sound file
 
@@ -17,20 +18,26 @@ import {Header, Footer, Preloader } from "./components";
 // Pages
 const Home = lazy(() => import("./pages/home"));
 const Booking = lazy(() => import("./pages/booking"));
+const Login = lazy(() => import("./pages/singInsignUp"));
 // const Whyus = lazy(() => import("./pages/why-us"));
 // const Blog = lazy(() => import("./pages/blog"));
 // const Faq = lazy(() => import("./pages/faq"));
 // const Contact = lazy(() => import("./pages/contact"));
 
 const Layout = () => {
+  const pagesWithHeaderAndFooter = ['/'];
+  const location = useLocation();
+  const shouldShowHeaderAndFooter = () => {
+    return pagesWithHeaderAndFooter.includes(location.pathname);
+  };
   return (
     <>
       <ScrollToTop />
       <ToastContainer />
       <div className="xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto min-h-screen flex flex-col justify-between">
-        <Header/>
+        {shouldShowHeaderAndFooter() && <Header/>}
         <Outlet />
-        <Footer/>
+        {shouldShowHeaderAndFooter() && <Footer/>}
       </div>
     </>
   );
@@ -63,6 +70,22 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Preloader/>}>
             <Booking/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/auth/login",
+        element: (
+          <Suspense fallback={<Preloader/>}>
+            <Login/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/dashboard",
+        element: (
+          <Suspense fallback={<Preloader/>}>
+            <Login/>
           </Suspense>
         ),
       },
