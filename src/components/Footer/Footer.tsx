@@ -8,21 +8,21 @@ const Footer = () => {
   return (
     <main className='w-11/12 xl:w-9/12 mx-auto mt-10'>
       {/* get in touch */}
-      <div className='bg-white shadow-xl shadow-gray-200 border group flex md:flex-row md:items-center gap-x-10 justify-between  p-5 lg:p-10 rounded-2xl md:rounded-3xl lg:rounded-[3rem]'>
-       <div className='space-y-5 flex-1'>
+      <div className='bg-form-bg bg-no-repeat bg-cover w-full shadow-xl shadow-gray-200 border group flex md:flex-row md:items-center gap-x-20 xl:gap-x-60 justify-between  p-5 lg:p-10 rounded-2xl md:rounded-3xl lg:rounded-[3rem] relative'>
+       <div className='space-y-5 flex-1 bg-white p-5 rounded-3xl'>
           <div>
-            <h1 className='text-main text-2xl lg:text-4xl font-semibold'>For more enquiry</h1>
+            <h1 className='text-main text-2xl lg:text-4xl font-bold text-center lg:text-left'>For more enquiry</h1>
             {/* <h3 className='text-xl font-semibold capitalize'>For more enquiry</h3>/ */}
           </div>
           <form className='w-full flex flex-col gap-y-2 '>
             <input className='w-full outline-none rounded-lg bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="text" placeholder='Name' />
             <input className='w-full outline-none rounded-lg bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="tel" placeholder='Mobile' />
             <input className='w-full outline-none rounded-lg bg-transparent border border-gray-300  px-3 py-1 xl:py-2 ' type="email" placeholder='Email' />
-            <button className='bg-main  w-fit text-white px-14 py-2 rounded-full mt-3' type='submit'>Send</button>
+            <button className='bg-main  w-fit mx-auto lg:mx-0 text-white px-14 py-2 rounded-full mt-3' type='submit'>Send</button>
           </form>
        </div>
-       <div className='hidden md:flex justify-center flex-1'>
-        <img className='h-40 w-40 xl:h-60 xl:w-60 duration-500 group-hover:rotate-12' src={gif1} alt="globe" />
+       <div className='hidden md:flex justify-center flex-1 '>
+        {/* <img className='absolute top-20 right-96 h-20 w-20 duration-500 group-hover:rotate-12' src={gif1} alt="globe" /> */}
        </div>
       </div>
       {/* footer */}

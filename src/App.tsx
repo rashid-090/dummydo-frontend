@@ -25,7 +25,7 @@ const Login = lazy(() => import("./pages/singInsignUp"));
 // const Contact = lazy(() => import("./pages/contact"));
 
 const Layout = () => {
-  const pagesWithHeaderAndFooter = ['/'];
+  const pagesWithHeaderAndFooter = ['/','/booking'];
   const location = useLocation();
   const shouldShowHeaderAndFooter = () => {
     return pagesWithHeaderAndFooter.includes(location.pathname);

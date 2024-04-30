@@ -25,7 +25,7 @@ module.exports = {
       bold:['Satoshi-Bold', 'sans-serif'],
      },
      backgroundImage: {
-      // 'banner-bg1': "url('./assets/images/home/3sea1.jpg')",
+      'form-bg': "url('./assets/images/cnfm.webp')",
     }
    },
   

@@ -19,7 +19,7 @@ const Home = () => {
      {/*  */}
      <CustomerSay/>
      {/*  */}
-     <FAQ/>
+     {/* <FAQ/> */}
     </main>
   )
 }
