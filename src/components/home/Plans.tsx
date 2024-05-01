@@ -3,7 +3,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const Plans = () => {
   return (
-    <div className='pr-44py-10 xl:py-20'>
+    <div className='pr-44 py-10 xl:py-20'>
         <div className='grid grid-cols-3 pb-10'>
           <div className='col-span-2'>
 
