@@ -18,11 +18,12 @@ import {Header, Footer, Preloader } from "./components";
 // Pages
 const Home = lazy(() => import("./pages/home"));
 const Booking = lazy(() => import("./pages/booking"));
-const Login = lazy(() => import("./pages/singInsignUp"));
+const Login = lazy(() => import("./pages/dashboard/login"));
+const Dashbaord = lazy(() => import("./pages/dashboard/dashboard"));
 // const Whyus = lazy(() => import("./pages/why-us"));
 // const Blog = lazy(() => import("./pages/blog"));
 // const Faq = lazy(() => import("./pages/faq"));
-// const Contact = lazy(() => import("./pages/contact"));
+const Contact = lazy(() => import("./pages/contact"));
 
 const Layout = () => {
   const pagesWithHeaderAndFooter = ['/','/booking'];
@@ -66,6 +67,14 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/test",
+        element: (
+          <Suspense fallback={<Preloader/>}>
+            <Contact/>
+          </Suspense>
+        ),
+      },
+      {
         path: "/booking",
         element: (
           <Suspense fallback={<Preloader/>}>
@@ -85,7 +94,7 @@ const router = createBrowserRouter([
         path: "/dashboard",
         element: (
           <Suspense fallback={<Preloader/>}>
-            <Login/>
+            <Dashbaord/>
           </Suspense>
         ),
       },

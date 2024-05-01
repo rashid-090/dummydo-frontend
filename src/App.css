@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-@font-face{
+/* @font-face{
     src: url(assets/fonts/Satoshi-Light.woff2) format(woff2);
     font-family: "Satoshi-light";
     font-display: swap;
@@ -25,6 +25,19 @@
   @font-face{
     src: url(assets/fonts/Satoshi-Bold.woff2) format(woff2);
     font-family: "Satoshi-Bold";
+    font-display: swap;
+  } */
+
+
+
+  @font-face{
+    src: url(assets/fonts/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.otf) format(woff2);
+    font-family: "gt_medium";
+    font-display: swap;
+  }
+  @font-face{
+    src: url(assets/fonts/futura_condensed.woff2) format(woff2);
+    font-family: "Futura_condensed";
     font-display: swap;
   }
 
@@ -84,7 +97,8 @@
   body{
     background-color: #fff;
     color: black;
-    font-family: "Satoshi-Regular", sans-serif;
+    font-family: "gt_medium", sans-serif;
+    font-weight: 100;
     overflow-x: hidden;
   }
   
@@ -105,3 +119,15 @@
     background-color: transparent !important;
     outline: none !important;
   }
+
+  .gradient-text {
+    /* Set text color to transparent */
+    color: transparent;
+    
+    /* Apply gradient background */
+    background-image: linear-gradient(to right,  rgba(0, 94, 255, 0.74) 0%, rgb(0, 2, 166) 100%);
+    
+    /* Set background clip to text */
+    -webkit-background-clip: text;
+    background-clip: text;
+}

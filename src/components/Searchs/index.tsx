@@ -88,27 +88,27 @@ const SearchPage = () => {
           ...base,
         //   border: state.isFocused ? 0 : 0,
         
-          borderColor: state.isFocused ? '#8e2157' : '#8e2157',
+          borderColor: state.isFocused ? '#0668e1' : '#0668e1',
           // This line disable the blue border
           boxShadow: state.isFocused ? 0 : 0,
           "&:hover": {
-            borderColor: state.isFocused ? '#8e2157' : '#8e2157',
+            borderColor: state.isFocused ? '#0668e1' : '#0668e1',
           }
         })
       };
     return (
-        <div className="w-full bg-white rounded-2xl xl:rounded-[3rem] shades p-5 lg:p-10">
+        <div className="w-full bg-white rounded-2xl xl:rounded-[10rem] shadow-2xl shadow-[#3e7ff9a6] p-5 lg:p-10 lg:px-20 up">
             <div className="flex mb-4 text-base font-medium">
                 
                 <button
-                    className={`px-4 py-2 flex items-center gap-2 rounded-full ${activeTab === 'flight' ? 'bg-main text-white' : 'bg-gray-100 text-gray-800'
+                    className={`px-4 py-2 flex items-center  gap-2 rounded-full ${activeTab === 'flight' ? 'bg-gradient-to-r from-[#004bff] to-[#002b9c] text-white' : 'bg-gray-100 text-gray-800'
                         }`}
                     onClick={() => handleTabChange('flight')}
                 >
                     <MdFlight/><p>Flight</p>
                 </button>
                 <button
-                    className={`px-4 py-2 flex items-center gap-2 rounded-full ${activeTab === 'fighthotel' ? 'bg-main text-white' : 'bg-gray-100 text-gray-800'
+                    className={`px-4 py-2 flex items-center  gap-2 rounded-full ${activeTab === 'fighthotel' ? 'bg-gradient-to-r from-[#004bff] to-[#002b9c] text-white' : 'bg-gray-100 text-gray-800'
                         } ml-2`}
                     onClick={() => handleTabChange('fighthotel')}
                 >
@@ -127,9 +127,9 @@ const SearchPage = () => {
                                 onChange={handleCheck}
                                 checked={checked}
                                 onColor="#cfcfcf"
-                                onHandleColor="#671042"
+                                onHandleColor="#0668e1"
                                 offColor="#cfcfcf"
-                                offHandleColor="#671042"
+                                offHandleColor="#0668e1"
                                 boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
                                 activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
                                 height={20}
@@ -158,11 +158,11 @@ const SearchPage = () => {
                           <div className='flex items-center gap-3 '>
                             <div className='flex items-center'>
                               <label>Fast:</label>
-                              <Checkbox  sx={{color:'#681143','&.Mui-checked': {color: '#681143',}}} required/>
+                              <Checkbox  sx={{color:'#0668e1','&.Mui-checked': {color: '#0668e1',}}} required/>
                             </div>
                             <div className='flex items-center'>
                               <label>Slow:</label>
-                              <Checkbox  sx={{color:'#681143','&.Mui-checked': {color: '#681143',}}} required/>
+                              <Checkbox  sx={{color:'#0668e1','&.Mui-checked': {color: '#0668e1',}}} required/>
                             </div>
                            
                           </div>
@@ -207,7 +207,7 @@ const SearchPage = () => {
                             />
                             )}
                     </div>
-                    <Link to={'/booking'} className='bg-main w-full md:w-32 rounded-full h-9 grid place-items-center text-white'><IoArrowForwardSharp/></Link>
+                    <Link to={'/booking'} className='bg-gradient-to-r from-[#004bff] to-[#002b9c] w-full md:w-32 rounded-full h-9 grid place-items-center text-white'><IoArrowForwardSharp/></Link>
                    </div>
                 </form>
                 </>
@@ -224,9 +224,9 @@ const SearchPage = () => {
                                onChange={handleCheck}
                                checked={checked}
                                onColor="#cfcfcf"
-                               onHandleColor="#671042"
+                               onHandleColor="#0668e1"
                                offColor="#cfcfcf"
-                               offHandleColor="#671042"
+                               offHandleColor="#0668e1"
                                boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
                                activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
                                height={20}

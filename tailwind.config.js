@@ -15,14 +15,12 @@ module.exports = {
        
    extend: {
      colors:{
-       'main': 'rgb(104, 17, 67)',
+       'main': 'rgb(0, 2, 166)',
        'bgshade':'#f5f8fa'
      },
      fontFamily: {
-      light:['Satoshi-light', 'sans-serif'],
-      normal:['Satoshi-Regular', 'sans-serif'],
-      medium:['Satoshi-Medium', 'sans-serif'],
-      bold:['Satoshi-Bold', 'sans-serif'],
+      gilmerlight:['good_times', 'sans-serif'],
+      futuracondensed:['Futura_condensed', 'sans-serif'],
      },
      backgroundImage: {
       'form-bg': "url('./assets/images/cnfm.webp')",
