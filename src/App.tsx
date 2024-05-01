@@ -35,7 +35,7 @@ const Layout = () => {
     <>
       <ScrollToTop />
       <ToastContainer />
-      <div className="xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto min-h-screen flex flex-col justify-between">
+      <div className="  mx-auto min-h-screen flex flex-col justify-between">
         {shouldShowHeaderAndFooter() && <Header/>}
         <Outlet />
         {shouldShowHeaderAndFooter() && <Footer/>}
