@@ -11,9 +11,10 @@ import globe from './images/svg/glob.svg'
 import vid1 from './video/dummy1.webm'
 import vid2 from './video/dummy2.mov'
 import gif1 from './images/gif/airplane-joypixels.gif'
+import paysuccess from './gif/paysuccess.gif'
 
 export {
-    vid1,vid2,gif1,
+    vid1,vid2,gif1,paysuccess,
     verifiedsvg,contactsvg,securesvg,locationsvg,globe,
     avt1,avt2,avt3,
     Logo1

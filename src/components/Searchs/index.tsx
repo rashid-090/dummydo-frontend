@@ -14,6 +14,7 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
+
 const options = [
     { value: 'Calicut', label: 'Calicut' },
     { value: 'Dubai', label: 'Dubai' },
@@ -31,9 +32,6 @@ const SearchPage = () => {
     const [passengerCount, setPassengerCount] = useState(1);
     const [openDate, setOpenDate] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null); 
-
-    const [value, InChange] = useState(new Date());
-    
     const [date, setDate] = useState([
         {
           startDate: new Date(),

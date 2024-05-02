@@ -5,16 +5,12 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import PhoneInput, { formatPhoneNumber, formatPhoneNumberIntl, isValidPhoneNumber } from 'react-phone-number-input'
 import 'react-phone-number-input/style.css';
+import { useNavigate } from 'react-router-dom';
 
-const options = [
-  { value: 'Calicut', label: 'Calicut' },
-  { value: 'Dubai', label: 'Dubai' },
-  { value: 'Kochi', label: 'Kochi' },
-  { value: 'Delhi', label: 'Delhi' },
-];
 
 
 const MultiStepForm = () => {
+  const navigate = useNavigate();
   const [code, setCode] = useState('')
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -145,6 +141,7 @@ const MultiStepForm = () => {
                   Previous
                 </button>
                 <button
+                onClick={()=> navigate('/payment-success')}
                   type="submit"
                   className="bg-white border shadow-lg  text-main hover:text-white font-medium tracking-wider transition-all duration-150 py-2 px-4 rounded-lg hover:bg-main"
                 >
