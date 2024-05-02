@@ -20,6 +20,7 @@ const Home = lazy(() => import("./pages/home"));
 const Booking = lazy(() => import("./pages/booking"));
 const Login = lazy(() => import("./pages/dashboard/login"));
 const Dashbaord = lazy(() => import("./pages/dashboard/dashboard"));
+const UserProfile = lazy(() => import("./pages/dashboard/profile"));
 // const Whyus = lazy(() => import("./pages/why-us"));
 // const Blog = lazy(() => import("./pages/blog"));
 // const Faq = lazy(() => import("./pages/faq"));
@@ -95,6 +96,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Preloader/>}>
             <Dashbaord/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/dashboard/:name",
+        element: (
+          <Suspense fallback={<Preloader/>}>
+            <UserProfile/>
           </Suspense>
         ),
       },

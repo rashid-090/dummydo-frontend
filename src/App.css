@@ -131,3 +131,9 @@
     -webkit-background-clip: text;
     background-clip: text;
 }
+
+.datttess{
+  border: 1px solid red;
+  outline: none !important;
+  border-radius: 20px;
+}
