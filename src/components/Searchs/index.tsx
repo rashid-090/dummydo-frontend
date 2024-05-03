@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { MdFlight } from "react-icons/md";
 import { FaHotel } from "react-icons/fa6";
 import { LuArrowRightLeft } from "react-icons/lu";
-import Select from 'react-select';
+// import Select from 'react-select';
 import Checkbox from '@mui/material/Checkbox';
 import { IoArrowForwardSharp } from "react-icons/io5";
 import Switch from "react-switch";
@@ -13,6 +13,7 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import { DatePicker, Select } from 'antd';
 
 
 const options = [
@@ -174,43 +175,21 @@ const SearchPage = () => {
                    </div>
                     <form className='w-full'>
                     
-                   <div className='flex flex-col md:flex-row items-center gap-4'>
-                    <Select
-                            placeholder='From'
-                            className='w-full font-medium'
-                            styles={style}
-                            defaultValue={selectedOption}
-                            onChange={handleChange}
-                            options={options}
-                            />
-                    <LuArrowRightLeft className='text-main rotate-90 md:rotate-0 text-xl w-20'/>
-                    <Select
-                            placeholder='To'
-                            className='w-full font-medium'
-                            styles={style}
-                            defaultValue={selectedOption}
-                            onChange={handleChange}
-                            options={options}
-                            /> 
-                    <div className='relative w-full' ref={modalRef}>
-                        <span  className='border border-main font-medium py-2 text-gray-700 text-sm  rounded-md w-full grid place-items-center' onClick={() => setOpenDate(!openDate)}>
-                                {`${format(date[0].startDate, "MMM d yyyy")} - ${format(
-                                date[0].endDate,
-                                "MMM d yyyy"
-                                )}`}
-                        </span>
-                        {openDate && (
-                            <DateRange
-                                editableDateInputs={true}
-                                onChange={(item) => setDate([item.selection])}
-                                moveRangeOnFirstSelection={false}
-                                ranges={date}
-                                className="customdate z-[99999]"
-                                minDate={new Date()}
-                            />
-                            )}
+                   <div className='flex flex-col md:flex-row items-center gap-x-2 gap-y-4'>
+                
+                    {/* <LuArrowRightLeft className='text-main rotate-90 md:rotate-0 text-xl w-20'/> */}
+                    <Select allowClear className='w-full h-10' placeholder="From" options={options} style={{fontWeight:'500'}}/>
+                    <Select allowClear className='w-full h-10' placeholder="To" options={options} style={{fontWeight:'500'}}/>
+                   
+                    <div className='w-full'>
+                      <DatePicker placeholder='Start date' className='w-full h-10 antdate'/>
                     </div>
-                    <button onClick={()=>navigate(`/booking`)} className='bg-gradient-to-r from-[#004bff] to-[#002b9c] w-full md:w-32 rounded-full h-9 grid place-items-center text-white'><IoArrowForwardSharp/></button>
+                    {checked && (
+                      <div className='w-full'>
+                        <DatePicker placeholder='End date' className='w-full h-10 antdate'/>
+                      </div>
+                    )}
+                    <button onClick={()=>navigate(`/booking`)} className={`bg-gradient-to-r from-[#004bff] to-[#002b9c] w-full h-10 ${checked ? 'md:w-44':'md:w-32'} rounded-full  grid place-items-center text-white`}><IoArrowForwardSharp/></button>
                    </div>
                 </form>
                 </>

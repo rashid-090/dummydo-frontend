@@ -144,17 +144,17 @@ function App() {
   }, [isLoading]);
 
   useEffect(() => {
-    const playNotificationSound = () => {
-      const audio = new Audio(notificationSound);
-      audio.play();
-    };
+    // const playNotificationSound = () => {
+    //   const audio = new Audio(notificationSound);
+    //   audio.play();
+    // };
 
-    const timerId = setTimeout(playNotificationSound, 5000); // 5000 milliseconds = 5 seconds
+    // const timerId = setTimeout(playNotificationSound, 5000); // 5000 milliseconds = 5 seconds
 
-    // Clean up the timer when the component unmounts or when the timer is no longer needed
-    return () => {
-      clearTimeout(timerId);
-    };
+    // // Clean up the timer when the component unmounts or when the timer is no longer needed
+    // return () => {
+    //   clearTimeout(timerId);
+    // };
 
   },[]);
 
