@@ -76,8 +76,8 @@ const CustomersSay = () => {
       modules={[Autoplay]}
     >
         {TestiData?.map((dt,i)=>(
-      <SwiperSlide className='py-8'>
-          <div className='p-5 xl:p-8 flex flex-col gap-y-3 xl:gap-y-5 border-2 h-fit xl:even:bg-gradient-to-r from-bg-from to-bg-to  xl:even:text-white text-gray-500 rounded-3xl hover:shadow-2xl duration-300' key={i}>
+      <SwiperSlide className='py-8 pb-16'>
+          <div className='p-5 xl:p-8 flex flex-col gap-y-3 xl:gap-y-5 border-2 h-fit xl:even:bg-gradient-to-r from-bg-from to-bg-to  xl:even:text-white text-gray-500 rounded-3xl hover:shadow-2xl  duration-300' key={i}>
                     <p className='text-sm sm:text-base md:text-xs lg:text-base  font-medium'>{dt.testimonial}</p>
                     <span className='flex gap-3 items-center'>
                         <img className='h-12 w-12 md:h-10 md:w-10 lg:h-12 lg:w-12' src={dt.userlogo} alt={dt.username} />

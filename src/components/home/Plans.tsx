@@ -19,7 +19,7 @@ const Plans = () => {
 
             </div>
             <div className='px-5 md:px-8  md:col-span-2 py-10 grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-5'>
-                <div className='flex flex-col justify-between gap-4 border-2 rounded-3xl hover:shadow-2xl duration-300  p-10'>
+                <div className='flex flex-col justify-between gap-4 border-2 rounded-3xl hover:shadow-2xl  duration-300  p-10'>
                     <div className='space-y-1'>
                         <h1 className='text-xl md:text-3xl font-bold text-black'>I want to reserve</h1>
                         {/* <h1 className='text-3xl font-bold gradient-text font-futuracondensed uppercase'>Flight only</h1> */}
@@ -44,7 +44,7 @@ const Plans = () => {
                     </div>
                     <button className='bg-gradient-to-r from-bg-from to-bg-to text-white px-10 py-3 rounded-full w-fit'>Book Now for $20</button>
                 </div>
-                <div className='flex flex-col justify-between gap-4 border-2 rounded-3xl hover:shadow-2xl duration-300  p-10'>
+                <div className='flex flex-col justify-between gap-4 border-2 rounded-3xl hover:shadow-2xl  duration-300  p-10'>
                     <div className='space-y-1'>
                             <h1 className='text-xl md:text-3xl font-bold text-black'>I want to reserve</h1>
                             {/* <h1 className='text-3xl font-bold gradient-text font-futuracondensed uppercase'>Flight and Hotel</h1> */}
