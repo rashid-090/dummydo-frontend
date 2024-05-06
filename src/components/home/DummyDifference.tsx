@@ -26,15 +26,15 @@ const Diffdata = [
 const DummyDifference = () => {
   return (
     <>
-     <div className='pl-44  py-10 xl:py-20 relative'>
-        <div className='grid grid-cols-3'>
-          <h1 className='text-2xl lg:text-4xl xl:text-7xl font-bold  text-left text-black font-futuracondensed uppercase'>choose <span className='gradient-text'>DummyFree.</span></h1>
+     <div className='xl:pl-44 py-20 py-12 xl:py-20 relative'>
+        <div className='px-5 md:px-8 xl:px-0 grid grid-cols-1 md:grid-cols-3 '>
+          <h1 className='text-2xl lg:text-4xl xl:text-7xl font-bold text-center  xl:text-left text-black font-futuracondensed uppercase '>choose <br className='hidden xl:block'/><span className='gradient-text'>DummyFree.</span></h1>
           <div className='col-span-2'>
 
           </div>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-x-10'>
-          <div className='md:col-span-2 py-10 grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-5 pt-10 xl:pt-16'>
+        <div className='grid grid-cols-1 xl:grid-cols-3 gap-x-10'>
+          <div className='px-5 md:px-8 xl:px-0 xl:col-span-2 py-10 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 pt-10 xl:pt-16'>
               {Diffdata?.map((dt,i)=>(
                 <div className='hover:shadow-2xl hover:shadow-main duration-300 border-2 rounded-3xl py-10  p-5 flex flex-col gap-y-2 items-start text-left' key={i}>
                   <img className='h-8 w-8' src={dt.icon} alt={dt.title} />
@@ -43,7 +43,7 @@ const DummyDifference = () => {
                 </div>
               ))}
           </div>
-          <div className='bg-gradient-to-r from-[#004bff] to-[#002b9c] rounded-l-[15rem]'>
+          <div className='block md:hidden xl:block ml-5 md:ml-0 h-60 xl:h-full bg-gradient-to-r from-bg-from to-bg-to rounded-l-[15rem]'>
 
           </div>
         </div>

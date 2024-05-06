@@ -4,9 +4,9 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Banner = () => {
   return (
-    <main className='grid grid-cols-1 md:grid-cols-2 gap-0  xl:gap-5 pt-5 xl:pt-0'>
+    <main className='grid grid-cols-1 md:grid-cols-2 gap-0  xl:gap-5 pt-3 md:pt-0'>
     <div className='flex flex-col gap-y-2 justify-center'>
-        <h1 className='text-2xl xl:text-8xl font-bold  font-futuracondensed uppercase text-black'>Reserve <br/><span className='gradient-text'><Typewriter
+        <h1 className='text-5xl xl:text-8xl font-bold  font-futuracondensed uppercase text-black'>Reserve <br className='hidden xl:block'/><span className='gradient-text'><Typewriter
                         words={['now.','now.','now.']}
                         cursor
                         loop

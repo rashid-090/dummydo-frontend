@@ -125,7 +125,7 @@
     color: transparent;
     
     /* Apply gradient background */
-    background-image: linear-gradient(to right,  rgba(0, 94, 255, 0.74) 0%, rgb(0, 2, 166) 100%);
+    background-image: linear-gradient(to right,  rgba(60, 174, 77, 0.866) 0%, rgb(18, 226, 49) 100%);
     
     /* Set background clip to text */
     -webkit-background-clip: text;

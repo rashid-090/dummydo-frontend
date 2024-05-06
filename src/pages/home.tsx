@@ -13,7 +13,7 @@ const Home = () => {
       {/*  */}
      <DummyDiffrence/>
      {/*  */}
-     <div className="w-11/12 xl:w-9/12 mx-auto h-1 bg-gradient-to-r from-main to-[#d8634000]"></div>
+     <div className="w-11/12 xl:w-9/12 mx-auto h-1 bg-gradient-to-r from-bg-from to-[#d8634000]"></div>
      {/*  */}
      <Plans/>
      {/*  */}

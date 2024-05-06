@@ -99,7 +99,7 @@ const SearchPage = () => {
         })
       };
     return (
-        <div className="w-full bg-white selection:bg-transparent rounded-2xl xl:rounded-[10rem] shadow-2xl shadow-[#3e7ff9a6] p-5 lg:p-10 lg:px-20 up">
+        <div className="w-full bg-white selection:bg-transparent rounded-2xl xl:rounded-[10rem] shadow-2xl shadow-[#3e7ff9a6] p-5 lg:p-10 lg:px-20">
           <div className="flex">
             <div className="flex space-x-4">
               <button

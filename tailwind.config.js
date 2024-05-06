@@ -16,7 +16,9 @@ module.exports = {
    extend: {
      colors:{
        'main': 'rgb(0, 2, 166)',
-       'bgshade':'#f5f8fa'
+       'bgshade':'#f5f8fa',
+       'bg-from':'#53b763',
+       'bg-to':'#17df34'
      },
      fontFamily: {
       gilmerlight:['good_times', 'sans-serif'],
