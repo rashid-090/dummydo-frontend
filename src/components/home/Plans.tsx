@@ -3,11 +3,11 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const Plans = () => {
   return (
-    <div className='xl:pr-44 pt-20 xl:py-20'>
-        <div className='block md:hidden mr-5 md:mr-0 h-60 xl:h-full bg-gradient-to-r from-bg-from to-bg-to rounded-r-[15rem]'>
+    <div className='xl:pr-44 pt-10 xl:py-20'>
+        <div className='hidden mr-5 md:mr-0 h-60 xl:h-full bg-gradient-to-r from-bg-from to-bg-to rounded-r-[15rem]'>
 
         </div>
-        <div className='px-5 md:px-8  grid grid-cols-1 xl:grid-cols-3 pt-10 md:pt-0 xl:pb-10'>
+        <div className='px-5 md:px-8  grid grid-cols-1 xl:grid-cols-3  xl:pb-10'>
           <div className='col-span-2'>
 
           </div>
@@ -73,6 +73,9 @@ const Plans = () => {
                 
             </div>
         </div>
+        <div className='block md:hidden mr-10 md:mr-0 h-52 xl:h-full bg-gradient-to-r from-bg-from to-bg-to rounded-r-[15rem]'>
+
+</div>
     </div>
   )
 }

@@ -4,9 +4,9 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Banner = () => {
   return (
-    <main className='grid grid-cols-1 md:grid-cols-2 gap-0  xl:gap-5 pt-3 md:pt-0'>
-    <div className='flex flex-col gap-y-2 justify-center'>
-        <h1 className='text-5xl xl:text-8xl font-bold  font-futuracondensed uppercase text-black'>Reserve <br className='hidden xl:block'/><span className='gradient-text'><Typewriter
+    <main className='flex flex-col-reverse md:flex-row gap-0 gap-y-4  xl:gap-5'>
+    <div className='flex-1 flex flex-col gap-y-2 justify-center'>
+        <h1 className='text-5xl xl:text-8xl font-bold text-center md:text-left  font-futuracondensed uppercase text-black'>Reserve <br className='hidden xl:block'/><span className='gradient-text'><Typewriter
                         words={['now.','now.','now.']}
                         cursor
                         loop
@@ -17,9 +17,9 @@ const Banner = () => {
                         /></span></h1>
         {/* <p className='text-gray-500 text-sm xl:text-base font-medium'>Lorem ipsum dolor sit amet consectetur,<br/> adipisicing elit. Consequatur, iure.</p> */}
     </div>
-     <div className=" relative w-full  grid place-items-end overflow-hidden z-10">
+     <div className="flex-1   relative w-full  grid place-items-end overflow-hidden z-10">
             <video
-                className="aspect-video"
+                className="aspect-[20/8] md:aspect-video"
                 autoPlay
                 loop
                 muted

@@ -81,30 +81,14 @@ const SearchPage = () => {
     };
 
   
-    const handleChange = (selectedOption: any) => {
-        setSelectedOption(selectedOption);
-      };
 
-      const style = {
-        control: (base:any, state:any) => ({
-          ...base,
-        //   border: state.isFocused ? 0 : 0,
-        
-          borderColor: state.isFocused ? '#0002a6' : '#0002a6',
-          // This line disable the blue border
-          boxShadow: state.isFocused ? 0 : 0,
-          "&:hover": {
-            borderColor: state.isFocused ? '#0002a6' : '#0002a6',
-          }
-        })
-      };
     return (
-        <div className="w-full bg-white selection:bg-transparent rounded-2xl xl:rounded-[10rem] shadow-2xl shadow-[#3e7ff9a6] p-5 lg:p-10 lg:px-20">
+        <div className="w-full bg-white selection:bg-transparent rounded-2xl xl:rounded-[10rem] shadow-2xl shadow-[#25d64044] p-5 lg:p-10 lg:px-20">
           <div className="flex">
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 text-xs sm:text-base">
               <button
                 className={`px-4 py-2 flex items-center  gap-2 rounded-full ${
-                  activeButton === "flight" ? "bg-gradient-to-r from-[#004bff] to-[#002b9c] text-white" : "bg-gray-100 text-gray-800"
+                  activeButton === "flight" ? "bg-gradient-to-r from-bg-from to-bg-to text-white" : "bg-gray-100 text-gray-800"
                 }`}
                 onClick={() => setActiveButton("flight")}
               >
@@ -112,7 +96,7 @@ const SearchPage = () => {
               </button>
               <button
                 className={`px-4 py-2 flex items-center  gap-2 rounded-full ${
-                  activeButton === "flight+hotel" ? "bg-gradient-to-r from-[#004bff] to-[#002b9c] text-white" : "bg-gray-100 text-gray-800"
+                  activeButton === "flight+hotel" ? "bg-gradient-to-r from-bg-from to-bg-to text-white" : "bg-gray-100 text-gray-800"
                 } `}
                 onClick={() => setActiveButton("flight+hotel")}
               >
@@ -122,18 +106,18 @@ const SearchPage = () => {
           </div>
            
           <>
-                   <div className='flex flex-col lg:flex-row gap-y-2 gap-x-10'>
+                   <div className=' flex items-center justify-between md:justify-start text-[10px] md:text-base gap-y-2 gap-x-3 md:gap-x-10'>
                      {/* toolge */}
                 
-                     <div className='flex gap-2 items-center h-14 capitalize text-sm font-medium'>
+                     <div className='flex gap-2 items-center h-14 capitalize font-medium'>
                                 <p>one way</p>
                                 <Switch
                                 onChange={handleCheck}
                                 checked={checked}
                                 onColor="#cfcfcf"
-                                onHandleColor="#0668e1"
+                                onHandleColor="#42c653"
                                 offColor="#cfcfcf"
-                                offHandleColor="#0668e1"
+                                offHandleColor="#42c653"
                                 boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
                                 activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
                                 height={20}
@@ -147,7 +131,7 @@ const SearchPage = () => {
                      {/* toolge */}
                      {/* Passenger */}
 
-                            <div className="flex items-center gap-2 selection:bg-none pb-5 md:pb-0">
+                            <div className="flex items-center gap-1 selection:bg-none">
                                 <span className="text-black font-medium px-1 text-center">Adults:</span>
                                 <AiFillMinusCircle className={`text-main text-xl  ${passengerCount <= 1 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`} onClick={decreasePassengerCount}/>
                                     <span className="text-gray-600 font-medium  text-center">{passengerCount}</span>
@@ -156,13 +140,15 @@ const SearchPage = () => {
                             </div>
                     
                      {/* Passenger */}
-                     {/* Processing speed */}
-                        <div className='flex items-center gap-3 text-black font-medium'>
+                     
+                   </div>
+                   {/* Processing speed */}
+                   <div className='flex text-xs md:text-base items-center gap-3 text-black font-medium'>
                           <p>Processing Speed:</p>
                           <div className='flex items-center gap-3 '>
                             <div className='flex items-center'>
                               <label>Fast:</label>
-                              <Checkbox  sx={{color:'#0668e1','&.Mui-checked': {color: '#0668e1',}}} required/>
+                              <Checkbox  sx={{color:'#42c653','&.Mui-checked': {color: '#42c653',}}} required/>
                             </div>
                             {/* <div className='flex items-center'>
                               <label>Slow:</label>
@@ -172,7 +158,6 @@ const SearchPage = () => {
                           </div>
                         </div>
                      {/* Processing speed */}
-                   </div>
                     <form className='w-full'>
                     
                    <div className='flex flex-col md:flex-row items-center gap-x-2 gap-y-4'>
@@ -189,7 +174,7 @@ const SearchPage = () => {
                         <DatePicker placeholder='End date' className='w-full h-10 antdate'/>
                       </div>
                     )}
-                    <button onClick={()=>navigate(`/booking`)} className={`bg-gradient-to-r from-[#004bff] to-[#002b9c] w-full h-10 ${checked ? 'md:w-44':'md:w-32'} rounded-full  grid place-items-center text-white`}><IoArrowForwardSharp/></button>
+                    <button onClick={()=>navigate(`/booking`)} className={`bg-gradient-to-r from-bg-from to-bg-to w-full h-10 ${checked ? 'md:w-44':'md:w-32'} rounded-full  grid place-items-center text-white`}><IoArrowForwardSharp/></button>
                    </div>
                 </form>
                 </>

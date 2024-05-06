@@ -6,9 +6,9 @@ import {globe,gif1} from '../../assets'
 
 const Footer = () => {
   return (
-    <main className='w-11/12 xl:w-9/12 mx-auto mt-10'>
+    <main className='w-11/12 xl:w-9/12 mx-auto'>
       {/* get in touch */}
-      <div className='bg-gradient-to-r from-bg-from to-bg-to w-full gap-y-5 xl:h-[400px] rounded-2xl xl:rounded-[20rem] p-10 xl:p-20 flex flex-col md:flex-row justify-center md:items-center'>
+      <div className='bg-gradient-to-r from-bg-from to-bg-to w-full gap-y-5 xl:h-[400px] rounded-2xl xl:rounded-[20rem] p-5 xl:p-20 flex flex-col md:flex-row justify-center md:items-center'>
           <div className='flex-1'><h1 className='text-2xl lg:text-4xl xl:text-7xl font-bold  text-center xl:text-left text-white font-futuracondensed uppercase'>for more<br className='hidden xl:block'/> details.</h1></div>
           <div className='flex-1'>
             <form className='w-full flex flex-col gap-y-2 text-white'>

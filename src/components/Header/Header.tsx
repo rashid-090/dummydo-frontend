@@ -63,10 +63,10 @@ const Header = () => {
         {/* {links?.map((item,i)=>(
           <Link key={i} to={item.link}>{item.label}</Link>
         ))} */}
-        <button className='bg-gradient-to-r from-[#004bff] to-[#002b9c] text-white px-5 py-1 xl:px-10 xl:py-2.5 rounded-full text-base uppercase' onClick={openModal}>Track your Ticket</button>
+        <button className='bg-gradient-to-r from-bg-from to-bg-to text-white px-5 py-1 xl:px-10 xl:py-2.5 rounded-full text-base uppercase' onClick={openModal}>Track your Ticket</button>
       </div>
      <div className='flex lg:hidden items-center gap-4'>
-        <button onClick={openModal} className='bg-gradient-to-r from-[#004bff] to-[#002b9c] text-white px-5 py-1.5 rounded-full text-sm font-medium uppercase ' >Track your Ticket</button>
+        <button onClick={openModal} className='bg-gradient-to-r from-bg-from to-bg-to text-white px-5 py-1.5 rounded-full text-sm font-medium uppercase ' >Track your Ticket</button>
         {/* <CgMenuRight onClick={toggleMenu} className="text-main text-3xl " /> */}
      </div>
       {/* small */}

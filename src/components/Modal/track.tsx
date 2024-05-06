@@ -37,7 +37,7 @@ const TarckModal = ({ isOpen, onClose }) => {
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="bg-gradient-to-r from-[#004bff] to-[#002b9c] text-white rounded-2xl p-5 py-10 md:p-10 w-[90%] md:w-[50%] xl:w-[35%] relative">
+        <div className="bg-gradient-to-r from-bg-from to-bg-to text-white rounded-2xl p-5 py-10 md:p-10 w-[90%] md:w-[50%] xl:w-[35%] relative">
           <IoIosCloseCircle className="absolute top-2 cursor-pointer right-2 text-2xl" onClick={onClose}/>
           <div className="flex flex-col gap-5">
             <h2 className="text-center font-medium text-3xl">Track Your Ticket</h2>
