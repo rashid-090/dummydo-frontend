@@ -10,7 +10,7 @@ const Home = () => {
         {/* Searches */}
         <Searches/>
       </div>
-      <div className="w-11/12 xl:w-9/12 mx-auto my-10 h-1 bg-gradient-to-r from-bg-from to-[#d8634000]"></div>
+      <div className="w-11/12 xl:w-9/12 mx-auto my-10 xl:mt-28 h-1 bg-gradient-to-r from-bg-from to-[#d8634000]"></div>
 
       {/*  */}
      <DummyDiffrence/>
