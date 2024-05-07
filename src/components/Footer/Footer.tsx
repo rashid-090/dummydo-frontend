@@ -3,8 +3,23 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import {globe,gif1} from '../../assets'
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  useEffect(() => {
+    const flipInterval = setInterval(() => {
+      setIsFlipped((prev) => !prev);
+    }, 2000);
+
+    return () => clearInterval(flipInterval);
+  }, []);
+
+
+
+
   return (
     <main className='w-11/12 xl:w-9/12 mx-auto'>
       {/* get in touch */}
