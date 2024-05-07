@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+
 const TestiData=[
     {
         testimonial:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam velit ipsa obcaecati aliquid nihil tempora magni ab, cupiditate sunt repellat.Quibusdam velit ipsa obcaecati aliquid nihil tempora magni ab, cupiditate sunt repellat.`,
@@ -39,9 +40,10 @@ const TestiData=[
 ]
 
 const CustomersSay = () => {
+
   return (
     <div className="w-11/12  xl:w-9/12 mx-auto py-10 xl:py-20">
-        <h1 className='text-2xl lg:text-4xl xl:text-7xl font-bold  text-center text-black font-futuracondensed uppercase'>client <span className='gradient-text'>testimonials</span></h1>
+        <h1 className='text-4xl xl:text-7xl font-bold  text-center text-black font-futuracondensed uppercase'>client <span className='gradient-text'>testimonials</span></h1>
         {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pt-10 xl:pt-16 ">
             {TestiData?.map((dt,i)=>(
                 <div className='p-5 xl:p-8 flex flex-col gap-y-3 xl:gap-y-5 border-2 h-fit xl:even:bg-gradient-to-r from-bg-from to-bg-to  xl:even:text-white text-gray-500 rounded-3xl hover:shadow-2xl duration-300' key={i}>
@@ -76,7 +78,7 @@ const CustomersSay = () => {
       modules={[Autoplay]}
     >
         {TestiData?.map((dt,i)=>(
-      <SwiperSlide className='py-8 pb-16'>
+      <SwiperSlide className='py-8 pb-16' key={i}>
           <div className='p-5 xl:p-8 flex flex-col gap-y-3 xl:gap-y-5 border-2 h-fit xl:even:bg-gradient-to-r from-bg-from to-bg-to  xl:even:text-white text-gray-500 rounded-3xl hover:shadow-2xl  duration-300' key={i}>
                     <p className='text-sm sm:text-base md:text-xs lg:text-base  font-medium'>{dt.testimonial}</p>
                     <span className='flex gap-3 items-center'>

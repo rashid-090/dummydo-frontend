@@ -12,7 +12,7 @@ const Plans = () => {
 
           </div>
  
-          <h1 className='text-2xl lg:text-4xl xl:text-7xl font-bold text-center xl:text-right text-black font-futuracondensed uppercase'>Book <span className='gradient-text'>now.</span></h1>
+          <h1 className='text-4xl xl:text-7xl font-bold text-center xl:text-right text-black font-futuracondensed uppercase'>Book <span className='gradient-text'>now.</span></h1>
         </div>
         <div className='grid grid-cols-1 xl:grid-cols-3 gap-x-10'>
             <div className='hidden xl:block mr-5 md:mr-0 h-60 xl:h-full bg-gradient-to-r from-bg-from to-bg-to rounded-r-[15rem]'>
