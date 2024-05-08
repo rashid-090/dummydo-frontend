@@ -11,8 +11,8 @@ const Banner = () => {
                         cursor
                         loop
                         cursorColor='transparent'
-                        typeSpeed={100}
-                        deleteSpeed={100}
+                        typeSpeed={200}
+                        deleteSpeed={200}
                         delaySpeed={1000}
                         /></span></h1>
         {/* <p className='text-gray-500 text-sm xl:text-base font-medium'>Lorem ipsum dolor sit amet consectetur,<br/> adipisicing elit. Consequatur, iure.</p> */}

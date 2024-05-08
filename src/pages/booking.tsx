@@ -46,7 +46,7 @@ const MultiStepForm = () => {
  
 
   return (
-    <div className="min-h-screen bg-white flex flex-col justify-center items-center">
+    <div className="min-h-screen bg-white flex flex-col justify-center items-center mb-20">
       <div className="bg-white p-10 h-full w-11/12 xl:w-9/12 mx-auto py-10 xl:py-20 rounded-3xl shadow-lg border">
         <div className="flex flex-col gap-4">
           <div className="w-full h-3 bg-gray-300 rounded-full">
