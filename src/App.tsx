@@ -9,11 +9,15 @@ import {
   RouterProvider,
   Outlet,
   useLocation,
+  // useNavigate,
 } from "react-router-dom";
-import notificationSound from './assets/mp3/flighttone.mp3'; // Import your notification sound file
+// import notificationSound from './assets/mp3/flighttone.mp3'; // Import your notification sound file
+
 
 // Components
 import {Header, Footer, Preloader } from "./components";
+import { useRecoilValue } from 'recoil';
+import { adminTokenAtom } from './recoil/adminAtoms';
 
 // Pages
 const Home = lazy(() => import("./pages/home"));
@@ -26,6 +30,8 @@ const PaySuccess = lazy(() => import("./pages/paySuccess"));
 // const Blog = lazy(() => import("./pages/blog"));
 // const Faq = lazy(() => import("./pages/faq"));
 const Contact = lazy(() => import("./pages/contact"));
+const Prices = lazy(() => import("./pages/dashboard/price/prices"));
+
 
 const Layout = () => {
   const pagesWithHeaderAndFooter = ['/','/booking'];
@@ -101,7 +107,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/dashboard/:name",
+        path: "/dashboard/:orderId",
         element: (
           <Suspense fallback={<Preloader/>}>
             <UserProfile/>
@@ -109,7 +115,15 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/payment-success",
+        path: "/dashboard/prices",
+        element: (
+          <Suspense fallback={<Preloader/>}>
+            <Prices/>
+          </Suspense>
+        ),
+      },
+      {
+        path: "/payment-success/:orderId/:referenceId",
         element: (
           <Suspense fallback={<Preloader/>}>
             <PaySuccess/>
@@ -124,6 +138,8 @@ const router = createBrowserRouter([
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isContentVisible, setIsContentVisible] = useState(false);
+  const token = useRecoilValue(adminTokenAtom)
+  
 
   useEffect(() => {
     // Simulating data fetching with setTimeout
@@ -157,6 +173,17 @@ function App() {
     // };
 
   },[]);
+
+  useEffect(() => {
+    const path = window.location.pathname;
+
+    if (path == "/auth/login" && token) {
+      window.location.href = "/dashboard";
+    }
+    if (path == "/dashboard" && !token) {
+      window.location.href = "/auth/login";
+    }
+  }, [token]);
 
 
   return (

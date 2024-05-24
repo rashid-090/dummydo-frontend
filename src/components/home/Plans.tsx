@@ -13,23 +13,23 @@ const Plans = () => {
     }, []);
   
   return (
-    <div className='xl:pr-44 pt-10 xl:py-20'>
-        <div className='hidden mr-5 md:mr-0 h-60 xl:h-full bg-gradient-to-r from-bg-from to-bg-to rounded-r-[15rem]'>
+    <div className='w-11/12  xl:w-9/12 mx-auto'>
+        {/* <div className='hidden mr-5 md:mr-0 h-60 xl:h-full bg-gradient-to-r from-bg-from to-bg-to rounded-r-[15rem] opacity-70'>
 
-        </div>
-        <div className='px-5 md:px-8  grid grid-cols-1 xl:grid-cols-3  xl:pb-10'>
-          <div className='col-span-2'>
+        </div> */}
+        <div className='grid grid-cols-1'>
+          {/* <div className='col-span-2'>
 
-          </div>
+          </div> */}
  
-          <h1 className='text-4xl xl:text-7xl font-bold text-center xl:text-right text-black font-futuracondensed uppercase'>Book <span className='gradient-text'>now.</span></h1>
+          <h1 className='text-4xl xl:text-7xl font-bold text-black font-futuracondensed uppercase text-center xl:text-left'>Book <span className='gradient-text'>now.</span></h1>
         </div>
-        <div className='grid grid-cols-1 xl:grid-cols-3 gap-x-10'>
-            <div className='hidden xl:block mr-5 md:mr-0 h-60 xl:h-full bg-gradient-to-r from-bg-from to-bg-to rounded-r-[15rem]'>
+        <div className='grid grid-cols-1 xl:grid-cols-2 gap-x-10 '>
+            {/* <div className='hidden xl:block mr-5 md:mr-0 h-60 xl:h-full bg-gradient-to-r from-bg-from to-bg-to rounded-r-[15rem] opacity-70'>
 
-            </div>
+            </div> */}
             {/* only mobile */}
-            <div className='p-5 block md:hidden'>
+            <div className='pt-10 block md:hidden'>
                 {isFlipped ? 
                     (
                         <div className='flex flex-col justify-between gap-4 border-2 rounded-3xl hover:shadow-2xl  duration-300  p-10'>
@@ -91,7 +91,7 @@ const Plans = () => {
                 
             </div>
             {/* only large */}
-            <div className='hidden md:grid px-5 md:px-8  md:col-span-2 py-10  grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-5'>
+            <div className='hidden md:grid   md:col-span-2 pt-10  grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-5'>
                 <div className='flex flex-col justify-between gap-4 border-2 rounded-3xl hover:shadow-2xl  duration-300  p-10'>
                     <div className='space-y-1'>
                         <h1 className='text-xl md:text-3xl font-bold text-black'>I want to reserve</h1>
@@ -146,9 +146,9 @@ const Plans = () => {
                 
             </div>
         </div>
-        <div className='block md:hidden mr-10 md:mr-0 h-52 xl:h-full bg-gradient-to-r from-bg-from to-bg-to rounded-r-[15rem]'>
+        {/* <div className='block md:hidden mr-10 md:mr-0 h-52 xl:h-full bg-gradient-to-r from-bg-from to-bg-to rounded-r-[15rem]'>
 
-</div>
+</div> */}
     </div>
   )
 }

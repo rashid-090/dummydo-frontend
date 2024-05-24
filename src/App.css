@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* @font-face{
     src: url(assets/fonts/Satoshi-Light.woff2) format(woff2);
     font-family: "Satoshi-light";
@@ -28,32 +27,30 @@
     font-display: swap;
   } */
 
+@font-face {
+  src: url(assets/fonts/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.otf)
+    format(woff2);
+  font-family: "gt_medium";
+  font-display: swap;
+}
+@font-face {
+  src: url(assets/fonts/futura_condensed.woff2) format(woff2);
+  font-family: "Futura_condensed";
+  font-display: swap;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  @font-face{
-    src: url(assets/fonts/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.otf) format(woff2);
-    font-family: "gt_medium";
-    font-display: swap;
-  }
-  @font-face{
-    src: url(assets/fonts/futura_condensed.woff2) format(woff2);
-    font-family: "Futura_condensed";
-    font-display: swap;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
 
-  
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    -webkit-tap-highlight-color: transparent;
-  }
-  
-  /* ::-moz-selection {
+/* ::-moz-selection {
     color: #fff;
     background: rgb(79, 148, 1);
   }
@@ -62,8 +59,8 @@
     color: #fff;
     background: rgb(79, 148, 1);
   } */
-  
-  /* 
+
+/* 
   ::-webkit-scrollbar{
   width: 12px;
   background: rgb(206, 204, 204);
@@ -78,60 +75,82 @@
   background:#4b4b4b;
   cursor: pointer;
   } */
-  
-  
-  [type="date"] {
-    background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  95% 50% no-repeat ;
-  }
-  [type="date"]::-webkit-inner-spin-button {
-    display: none;
-  }
-  [type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0;
-  }
-  ::-webkit-datetime-edit-text { color:#9ca3af}
-  ::-webkit-datetime-edit-month-field { color:#9ca3af }
-  ::-webkit-datetime-edit-day-field { color: #9ca3af; }
-  ::-webkit-datetime-edit-year-field { color:#9ca3af; }
-  
-  body{
-    background-color: #fff;
-    color: black;
-    font-family: "gt_medium", sans-serif;
-    font-weight: 100;
-    overflow-x: hidden;
-  }
-  
-  
-  .shades{
-    -webkit-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.15);
-    -moz-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.15);
-    box-shadow: 0px 0px 33px 0px rgba(155, 155, 155, 0.30);
-  }
 
-  .customdate{
-    position: absolute;
-    top: 50px;
-    left: 0;
-  }
-
-  .phonecode input{
-    background-color: transparent !important;
-    outline: none !important;
-  }
-
-  .gradient-text {
-    /* Set text color to transparent */
-    color: transparent;
-    
-    /* Apply gradient background */
-    background-image: linear-gradient(to right,  rgba(60, 174, 77, 0.866) 0%, rgb(18, 226, 49) 100%);
-    
-    /* Set background clip to text */
-    -webkit-background-clip: text;
-    background-clip: text;
+[type="date"] {
+  background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
+    95% 50% no-repeat;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+::-webkit-datetime-edit-text {
+  color: #9ca3af;
+}
+::-webkit-datetime-edit-month-field {
+  color: #9ca3af;
+}
+::-webkit-datetime-edit-day-field {
+  color: #9ca3af;
+}
+::-webkit-datetime-edit-year-field {
+  color: #9ca3af;
 }
 
-.antdate{
+body {
+  background-color: #fff;
+  color: black;
+  font-family: "gt_medium", sans-serif;
+  font-weight: 100;
+  overflow-x: hidden;
+}
+
+.shades {
+  -webkit-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 33px 0px rgba(155, 155, 155, 0.3);
+}
+
+.customdate {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.phonecode input {
+  background-color: transparent !important;
+  outline: none !important;
+}
+
+.gradient-text {
+  /* Set text color to transparent */
+  color: transparent;
+
+  /* Apply gradient background */
+  background-image: linear-gradient(
+    to right,
+    rgba(60, 174, 77, 0.866) 0%,
+    rgb(18, 226, 49) 100%
+  );
+
+  /* Set background clip to text */
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.antdate {
   font-weight: 500;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]{
+  appearance: textfield;
+  -moz-appearance: textfield;
 }

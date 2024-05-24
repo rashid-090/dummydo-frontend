@@ -21,7 +21,7 @@ const FaqData=[
   },
 ]
 
-const FAQItem = ( {question, answer} ) => {
+const FAQItem = ( {question, answer}:{question:string, answer:string}) => {
   const [isOpen, setIsOpen] = useState(false);
 
 
@@ -31,7 +31,7 @@ const FAQItem = ( {question, answer} ) => {
 
 
   return (
-    <div className="">
+    <div>
       <div
         className={`flex gap-x-10 md:gap-x-0 py3 justify-between items-center bg-white border-b  pl-0 p-4 cursor-pointer transition duration-300 ease-in-out `}
         onClick={toggleOpen}

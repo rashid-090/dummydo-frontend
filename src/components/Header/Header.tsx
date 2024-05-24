@@ -57,7 +57,7 @@ const Header = () => {
   };
   return (
     <nav className='w-11/12  xl:w-9/12 mx-auto flex items-center justify-between h-16 lg:h-20  xl:h-28 z-50'>
-      <Link to={'/'}><span className='flex items-center gap-2'><h4 className='text-main text-lg lg:text-2xl font-futuracondensed uppercase'>DummyFree</h4></span></Link>
+      <Link to={'/'}><span className='flex items-center gap-2'><h4 className='text-main text-lg lg:text-2xl font-futuracondensed uppercase'>Dummydo</h4></span></Link>
       {/* large screen */}
       <div className='hidden lg:flex items-center gap-8 capitalize font-medium text-lg'>
         {/* {links?.map((item,i)=>(
