@@ -25,8 +25,16 @@ const Footer = () => {
     <main className='w-11/12 xl:w-9/12 mx-auto'>
       {/* get in touch */}
       {!showFooter &&
-      <div className='w-full xl:mt-10 overflow-hidden rounded-xl xl:rounded-[3rem]'>
-        <img className='w-full' src={coupon} alt="coupon" />
+    <div className='bg-gradient-to-r from-bg-from to-bg-to w-full gap-y-5 xl:h-[400px] rounded-2xl xl:rounded-[20rem] p-5 xl:p-20 flex flex-col md:flex-row justify-center md:items-center'>
+          <div className='flex-1'><h1 className='text-2xl lg:text-4xl xl:text-7xl font-bold  text-center xl:text-left text-white font-futuracondensed uppercase'>for more<br className='hidden xl:block'/> details.</h1></div>
+          <div className='flex-1'>
+            <form className='w-full flex flex-col gap-y-2 text-white'>
+              <input className='w-full outline-none bg-transparent placeholder:text-white border-b border-gray-300  px-3 py-1 xl:py-2 ' type="text" placeholder='Name' />
+              <input className='w-full outline-none bg-transparent placeholder:text-white border-b border-gray-300  px-3 py-1 xl:py-2 ' type="tel" placeholder='Mobile' />
+              <input className='w-full outline-none bg-transparent placeholder:text-white border-b border-gray-300  px-3 py-1 xl:py-2 ' type="email" placeholder='Email' />
+              <button className='bg-white  w-fit mx-auto lg:mx-0 text-main px-14 py-2 rounded-full mt-3' type='submit'>Submit</button>
+            </form>
+          </div>
       </div>
        }
       {/* <div className='bg-form-bg bg-no-repeat bg-cover w-full shadow-xl shadow-gray-200 border group flex md:flex-row md:items-center gap-x-20 xl:gap-x-60 justify-between  p-5 lg:p-10 rounded-2xl md:rounded-3xl lg:rounded-[3rem] relative'>
@@ -67,7 +75,7 @@ const Footer = () => {
         </div> */}
       </div>
       <hr />
-      <div className='w-full py-2 xl:py-4 text-xs  md:text-sm flex justify-between text-gray-400'>
+      <div className='w-full py-2 xl:py-4 text-xs font-medium md:text-sm flex justify-between text-gray-400'>
         <p>© 2024. All rights reserved.</p>
         <a className='hover:underline' href='https://dostudio.co.in' target='_blank'>Powered by DO studio</a>
       </div>
