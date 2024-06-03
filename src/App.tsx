@@ -11,8 +11,8 @@ import {
   useLocation,
   // useNavigate,
 } from "react-router-dom";
-// import notificationSound from './assets/mp3/flighttone.mp3'; // Import your notification sound file
-
+import notificationSound from './assets/mp3/flighttone.mp3'; // Import your notification sound file
+// import { Howl } from 'howler';
 
 // Components
 import {Header, Footer, Preloader } from "./components";
@@ -31,6 +31,8 @@ const PaySuccess = lazy(() => import("./pages/paySuccess"));
 // const Faq = lazy(() => import("./pages/faq"));
 const Contact = lazy(() => import("./pages/contact"));
 const Prices = lazy(() => import("./pages/dashboard/price/prices"));
+
+
 
 
 const Layout = () => {
@@ -145,7 +147,7 @@ function App() {
     // Simulating data fetching with setTimeout
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Simulate a 2-second loading time
+    }, 500); // Simulate a 2-second loading time
 
     // Clean up the timer to avoid memory leaks
     return () => clearTimeout(timer);
@@ -159,20 +161,19 @@ function App() {
     }
   }, [isLoading]);
 
-  useEffect(() => {
-    // const playNotificationSound = () => {
-    //   const audio = new Audio(notificationSound);
-    //   audio.play();
-    // };
 
-    // const timerId = setTimeout(playNotificationSound, 5000); // 5000 milliseconds = 5 seconds
+    useEffect(() => {
+    const timer = setTimeout(() => {
+      // Play welcome tone
+      const audio = new Audio(notificationSound);
+      audio.play();
+    }, 5000); // 2 seconds
 
-    // // Clean up the timer when the component unmounts or when the timer is no longer needed
-    // return () => {
-    //   clearTimeout(timerId);
-    // };
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
-  },[]);
 
   useEffect(() => {
     const path = window.location.pathname;
