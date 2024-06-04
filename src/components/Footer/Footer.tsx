@@ -22,17 +22,24 @@ const Footer = () => {
 
 
   return (
-    <main className='w-11/12 xl:w-9/12 mx-auto'>
-      {/* get in touch */}
-      {!showFooter &&
-        <div className=' bg-gradient-to-r from-bg-from to-bg-to py-10 xl:py-16 p-5 xl:p-10 text-white rounded-3xl'>
-            <h1 className='text-3xl xl:text-4xl'>Further Questions?</h1>
-            <div className='text-base md:text-lg font-thin pt-5'>
-                <p className=''>Our team will clear your doubts.</p>
-                <p className=''>We ensure a quick response.</p>
+    <>
+     {/* get in touch */}
+     {!showFooter &&
+        <div className='-mb-20 xl:-mb-28 z-20 shadow-2xl border w-11/12 xl:w-9/12 mx-auto bg-white text-gray-700 py-10 xl:py-16 p-7 xl:p-20 flex flex-col gap-y-5 md:flex-row justify-between md:items-center rounded-3xl'>
+            <div>
+              <h1 className='text-3xl xl:text-4xl'>Further Questions?</h1>
+              <div className='text-base md:text-lg font-thin pt-5'>
+                  <p className=''>Our team will clear your doubts.</p>
+                  <p className='-mt-2'>We ensure a quick response.</p>
+              </div>
+            </div>
+            <div>
+              <a href='https://wa.me/971585503940' target='_blank' className='bg-gradient-to-r from-bg-from to-bg-to text-white hover:bg-gray-200 duration-100  px-10 py-3.5 rounded-md capitalize'>get started</a>
             </div>
         </div>
        }
+    <main className=' bg-gradient-to-r from-bg-from to-bg-to'>
+     
       {/* <div className='bg-form-bg bg-no-repeat bg-cover w-full shadow-xl shadow-gray-200 border group flex md:flex-row md:items-center gap-x-20 xl:gap-x-60 justify-between  p-5 lg:p-10 rounded-2xl md:rounded-3xl lg:rounded-[3rem] relative'>
        <div className='space-y-5 flex-1 bg-white p-5 rounded-3xl'>
           <div>
@@ -51,31 +58,34 @@ const Footer = () => {
        </div>
       </div> */}
       {/* footer */}
-      <div className='pt-10 pb-5 xl:pt-20 flex flex-col gap-y-10 md:flex-row justify-between md:items-center'>
-        <div className='space-y-3 xl:space-y-5'>
-          {/* <span className='flex items-center gap-2'><h4 className='text-main text-lg lg:text-2xl font-futuracondensed uppercase'>DummyFree</h4></span>
-          <p className='text-sm text-gray-500 font-medium'>Lorem ipsum dolor sit amet consectetur<br className='hidden md:block'/> adipisicing elit.</p> */}
-          <div className='flex items-center gap-2'>
-            <span className='h-10 w-10 bg-gray-100 rounded-3xl grid place-items-center text-main text-2xl hover:-translate-y-1 duration-300 cursor-pointer'><FaFacebook/></span>
-            <span className='h-10 w-10 bg-gray-100 rounded-3xl grid place-items-center text-main text-2xl hover:-translate-y-1 duration-300 cursor-pointer'><FaInstagram/></span>
+      <div className='w-11/12 xl:w-9/12 mx-auto pt-20 z-10'>
+        <div className='pt-10 pb-5 xl:pt-20 flex flex-col gap-y-10 md:flex-row justify-between md:items-center'>
+          <div className='space-y-3 xl:space-y-5'>
+            {/* <span className='flex items-center gap-2'><h4 className='text-main text-lg lg:text-2xl font-futuracondensed uppercase'>DummyFree</h4></span>
+            <p className='text-sm text-gray-500 font-medium'>Lorem ipsum dolor sit amet consectetur<br className='hidden md:block'/> adipisicing elit.</p> */}
+            <div className='flex items-center gap-2'>
+              <span className='h-10 w-10 bg-gray-100 rounded-3xl grid place-items-center text-main text-2xl hover:-translate-y-1 duration-300 cursor-pointer'><FaFacebook/></span>
+              <span className='h-10 w-10 bg-gray-100 rounded-3xl grid place-items-center text-main text-2xl hover:-translate-y-1 duration-300 cursor-pointer'><FaInstagram/></span>
+            </div>
           </div>
+          {/* <div>
+            <h4 className='text-lg capitalize text-main font-medium'>quick links</h4>
+            <div className='text-base flex flex-col pt-3 font-medium text-gray-500 capitalize gap-1'>
+              <Link to={'/'} className='hover:underline hover:translate-x-0.5 duration-300'>Why us</Link>
+              <Link to={'/'} className='hover:underline hover:translate-x-0.5 duration-300'>Blog</Link>
+              <Link to={'/'} className='hover:underline hover:translate-x-0.5 duration-300'>FAQ's</Link>
+              <Link to={'/'} className='hover:underline hover:translate-x-0.5 duration-300'>contact</Link>
+            </div>
+          </div> */}
         </div>
-        {/* <div>
-          <h4 className='text-lg capitalize text-main font-medium'>quick links</h4>
-          <div className='text-base flex flex-col pt-3 font-medium text-gray-500 capitalize gap-1'>
-            <Link to={'/'} className='hover:underline hover:translate-x-0.5 duration-300'>Why us</Link>
-            <Link to={'/'} className='hover:underline hover:translate-x-0.5 duration-300'>Blog</Link>
-            <Link to={'/'} className='hover:underline hover:translate-x-0.5 duration-300'>FAQ's</Link>
-            <Link to={'/'} className='hover:underline hover:translate-x-0.5 duration-300'>contact</Link>
-          </div>
-        </div> */}
-      </div>
-      <hr />
-      <div className='w-full py-2 xl:py-4 text-xs font-medium md:text-sm flex justify-between text-gray-400'>
-        <p>© 2024. All rights reserved.</p>
-        {/* <a className='hover:underline' href='https://dostudio.co.in' target='_blank'>Powered by DO studio</a> */}
+        <hr />
+        <div className='w-full py-2 xl:py-4 text-xs font-medium md:text-sm flex justify-between text-white'>
+          <p>© 2024. All rights reserved.</p>
+          {/* <a className='hover:underline' href='https://dostudio.co.in' target='_blank'>Powered by DO studio</a> */}
+        </div>
       </div>
     </main>
+    </>
   )
 }
 
