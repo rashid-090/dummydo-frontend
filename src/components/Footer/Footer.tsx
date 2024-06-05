@@ -25,16 +25,16 @@ const Footer = () => {
     <>
      {/* get in touch */}
      {!showFooter &&
-        <div className='-mb-20 xl:-mb-28 z-20 shadow-2xl border w-11/12 xl:w-9/12 mx-auto bg-white text-gray-700 py-10 xl:py-16 p-7 xl:p-20 flex flex-col gap-y-5 md:flex-row justify-between md:items-center rounded-3xl'>
+        <div className='-mb-20 xl:-mb-28 z-20 shadow-2xl border w-11/12 xl:w-9/12 mx-auto bg-white text-gray-700 py-10 xl:py-16 p-7 xl:p-20 flex flex-col gap-y-8 md:flex-row justify-between items-center rounded-3xl'>
             <div>
-              <h1 className='text-3xl xl:text-4xl'>Further Questions?</h1>
+              <h1 className='text-3xl xl:text-4xl font-bold'>Do you have any more questions?</h1>
               <div className='text-base md:text-lg font-thin pt-5'>
-                  <p className=''>Our team will clear your doubts.</p>
-                  <p className='-mt-2'>We ensure a quick response.</p>
+                  <p className='-mt-2'>Our team is here to address your concerns promptly.</p>
+
               </div>
             </div>
             <div>
-              <a href='https://wa.me/971585503940' target='_blank' className='bg-gradient-to-r from-bg-from to-bg-to text-white hover:bg-gray-200 duration-100  px-10 py-3.5 rounded-md capitalize'>get started</a>
+              <a href='mailto:hello@dummydo.com' target='_blank' className='bg-gradient-to-r from-bg-from to-bg-to text-white hover:bg-gray-200 duration-100  px-10 py-3.5 rounded-md capitalize'>get started</a>
             </div>
         </div>
        }
