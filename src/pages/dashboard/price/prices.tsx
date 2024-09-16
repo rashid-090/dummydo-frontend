@@ -15,10 +15,14 @@ const initialPrice = {
   _id: "",
   countryName: "",
   currencySymbol: "",
-  baseRate: "",
+  oneWayRate: "",
+  oneWayUrgentRate:"",
+  oneWayHotelRate:"",
+  oneWayUrgentHotelRate:"",
   roundTripRate: "",
-  fastProcessSurCharge: "",
-  flightWithHotelSurCharge: "",
+  roundTripUrgentRate: "",
+  roundTripHotelRate: "",
+  roundTripUrgentHotelRate:""
 }
 
 const Prices = () => {
@@ -154,7 +158,7 @@ const Prices = () => {
       const objectValidation = (saveData: any) => {
         const objectValid = objectExists(saveData)
         if (objectValid) {
-          const checkAllKeysExists = Object.keys(saveData).length == 6
+          const checkAllKeysExists = Object.keys(saveData).length === 10
           const valueLength = Object.values(saveData).every(each => {
             return each !== undefined && typeof each === 'string' && each.length > 0;
           })
@@ -201,9 +205,13 @@ const Prices = () => {
                 <TableCell><div className='text-left'>Country</div></TableCell>
                 <TableCell><div className='text-center'>Currency</div></TableCell>
                 <TableCell><div className='text-center'>One Way</div></TableCell>
+                <TableCell><div className='text-center'>One Way Fast</div></TableCell>
+                <TableCell><div className='text-center'>One Way + Hotel</div></TableCell>
+                <TableCell><div className='text-center'>One Way Fast + Hotel</div></TableCell>
                 <TableCell><div className='text-center'>Round Trip</div></TableCell>
-                <TableCell><div className='text-center'>Fast Processing Fee</div></TableCell>
-                <TableCell><div className='text-center'>Flight + Hotel</div></TableCell>
+                <TableCell><div className='text-center'>Round trip Fast</div></TableCell>
+                <TableCell><div className='text-center'>Round trip + Hotel</div></TableCell>
+                <TableCell><div className='text-center'>Round trip Fast + Hotel</div></TableCell>
                 <TableCell><div className='text-center'>Actions</div></TableCell>
               </TableRow>
             </TableHead>
@@ -263,8 +271,23 @@ const Prices = () => {
                         </TableRow>
                         <TableRow>
                           <TableCell>One-Way Fare</TableCell>
-                          <TableCell><h4 className='text-green-600'>{singlePriceForModal?.baseRate || ""}</h4></TableCell>
-                          <TableCell><input onChange={priceDataHandler} defaultValue={priceData["baseRate"]} name='baseRate' className='outline-none border border-gray-400 rounded h-8 mx-auto pl-2 priceInput' type="number" maxLength={8} onInput={(event) => priceValidation(event)} /></TableCell>
+                          <TableCell><h4 className='text-green-600'>{singlePriceForModal?.oneWayRate || ""}</h4></TableCell>
+                          <TableCell><input onChange={priceDataHandler} defaultValue={priceData["oneWayRate"]} name='oneWayRate' className='outline-none border border-gray-400 rounded h-8 mx-auto pl-2 priceInput' type="number" maxLength={8} onInput={(event) => priceValidation(event)} /></TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell>One Way Fast Fare</TableCell>
+                          <TableCell><h4 className='text-green-600'>{singlePriceForModal?.oneWayUrgentRate || ""}</h4></TableCell>
+                          <TableCell><input onChange={priceDataHandler} defaultValue={priceData["oneWayUrgentRate"]} name='oneWayUrgentRate' className='outline-none border border-gray-400 rounded h-8 mx-auto pl-2 priceInput' type="number" maxLength={8} onInput={(event) => priceValidation(event)} /></TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell>One Way + Hotel Fare</TableCell>
+                          <TableCell><h4 className='text-green-600'>{singlePriceForModal?.oneWayHotelRate || ""}</h4></TableCell>
+                          <TableCell><input onChange={priceDataHandler} defaultValue={priceData["oneWayHotelRate"]} name='oneWayHotelRate' className='outline-none border border-gray-400 rounded h-8 mx-auto pl-2 priceInput' type="number" maxLength={8} onInput={(event) => priceValidation(event)} /></TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell>One Way Fast + Hotel Fare</TableCell>
+                          <TableCell><h4 className='text-green-600'>{singlePriceForModal?.oneWayUrgentHotelRate || ""}</h4></TableCell>
+                          <TableCell><input onChange={priceDataHandler} defaultValue={priceData["oneWayUrgentHotelRate"]} name='oneWayUrgentHotelRate' className='outline-none border border-gray-400 rounded h-8 mx-auto pl-2 priceInput' type="number" maxLength={8} onInput={(event) => priceValidation(event)} /></TableCell>
                         </TableRow>
                         <TableRow>
                           <TableCell>Round-Trip Fare</TableCell>
@@ -272,14 +295,19 @@ const Prices = () => {
                           <TableCell><input onChange={priceDataHandler} defaultValue={priceData["roundTripRate"]} name='roundTripRate' className='outline-none border border-gray-400 rounded h-8 mx-auto pl-2 priceInput' type="number" maxLength={8} onInput={(event) => priceValidation(event)} /></TableCell>
                         </TableRow>
                         <TableRow>
-                          <TableCell>Fast Processing Fare</TableCell>
-                          <TableCell><h4 className='text-green-600'>{singlePriceForModal?.fastProcessSurCharge || ""}</h4></TableCell>
-                          <TableCell><input onChange={priceDataHandler} defaultValue={priceData["fastProcessSurCharge"]} name='fastProcessSurCharge' className='outline-none border border-gray-400 rounded h-8 mx-auto pl-2 priceInput' type="number" maxLength={8} onInput={(event) => priceValidation(event)} /></TableCell>
+                          <TableCell>Round trip Fast Fare</TableCell>
+                          <TableCell><h4 className='text-green-600'>{singlePriceForModal?.roundTripUrgentRate || ""}</h4></TableCell>
+                          <TableCell><input onChange={priceDataHandler} defaultValue={priceData["roundTripUrgentRate"]} name='roundTripUrgentRate' className='outline-none border border-gray-400 rounded h-8 mx-auto pl-2 priceInput' type="number" maxLength={8} onInput={(event) => priceValidation(event)} /></TableCell>
                         </TableRow>
                         <TableRow>
-                          <TableCell>Flight + Hotel Fare</TableCell>
-                          <TableCell><h4 className='text-green-600'>{singlePriceForModal?.flightWithHotelSurCharge || ""}</h4></TableCell>
-                          <TableCell><input onChange={priceDataHandler} defaultValue={priceData["flightWithHotelSurCharge"]} name='flightWithHotelSurCharge' className='outline-none border border-gray-400 rounded h-8 mx-auto pl-2 priceInput' type="number" maxLength={8} onInput={(event) => priceValidation(event)} /></TableCell>
+                          <TableCell>Round trip + Hotel Fare</TableCell>
+                          <TableCell><h4 className='text-green-600'>{singlePriceForModal?.roundTripHotelRate || ""}</h4></TableCell>
+                          <TableCell><input onChange={priceDataHandler} defaultValue={priceData["roundTripHotelRate"]} name='roundTripHotelRate' className='outline-none border border-gray-400 rounded h-8 mx-auto pl-2 priceInput' type="number" maxLength={8} onInput={(event) => priceValidation(event)} /></TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell>Round trip Fast + Hotel Fare</TableCell>
+                          <TableCell><h4 className='text-green-600'>{singlePriceForModal?.roundTripUrgentHotelRate || ""}</h4></TableCell>
+                          <TableCell><input onChange={priceDataHandler} defaultValue={priceData["roundTripUrgentHotelRate"]} name='roundTripUrgentHotelRate' className='outline-none border border-gray-400 rounded h-8 mx-auto pl-2 priceInput' type="number" maxLength={8} onInput={(event) => priceValidation(event)} /></TableCell>
                         </TableRow>
                       </TableBody>
                     </Table>

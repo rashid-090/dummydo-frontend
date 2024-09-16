@@ -4,7 +4,7 @@ import baseURL from '../baseUrl'
 
 export const getOrders = async() => {
     try{
-        const response = await baseURL.post(`/admin/get-orders`);
+        const response = await baseURL.get(`/admin/get-orders`);
         if (response) {
             return response.data
         }
@@ -36,7 +36,7 @@ export const uploadTicket = async(orderId:string,ticket:File) => {
 
 export const getOrderDetails = async(orderId:string) => {
     try{
-        const response = await baseURL.patch(`/admin/get-single-order/${orderId}`);
+        const response = await baseURL.get(`/admin/get-single-order/${orderId}`);
         if (response) {
             return response.data
         }
@@ -48,7 +48,7 @@ export const getOrderDetails = async(orderId:string) => {
 
 export const getCountryWisePriceList = async()=>{
     try{
-        const response = await baseURL.post(`/admin/getPriceList`);
+        const response = await baseURL.get(`/admin/getPriceList`);
         if (response) {
             return response.data
         }

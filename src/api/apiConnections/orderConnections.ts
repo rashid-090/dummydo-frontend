@@ -30,7 +30,7 @@ export const createPaymentSession = async(data:{total:number,orderId:string,curr
 
 export const getOrderStatus = async(referenceId:string) => {
     try{
-        const response = await baseURL.post(`/order/get-order-status`,{referenceId});
+        const response = await baseURL.get(`/order/get-order-status/${referenceId}`);
         if (response) {
             return response.data
         }

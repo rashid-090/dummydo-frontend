@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState, useRef } from "react"
-import axios from 'axios'
+import { searchAirport } from "../../api/apiConnections/airportConnections"
 
 const SearchInput = ({ setJourneyLocation, otherLocation, fieldName, placeHolderName }: { setJourneyLocation:(value:any)=>void, otherLocation:string, fieldName: string, placeHolderName: string }) => {
     const [searchText, setSearchText] = useState("")
@@ -50,12 +50,10 @@ const SearchInput = ({ setJourneyLocation, otherLocation, fieldName, placeHolder
 
             searchTimeOut.current = setTimeout(async () => {
                 try {
-                    // const response = await axios.post(`https://port-api.com/airport/search`,{search_string:searchValue})
-                    const response = await axios.get(`https://port-api.com/airport/search/${searchValue}`)
-                    const airportsData = response.data
-                    if (airportsData?.features.length) {
-                        const countLimited = airportsData.features.slice(0,5).map((eachObject: { properties: { name: object } }) => (eachObject.properties.name)).filter((location:string)=>location !== otherLocation && location !== "delete or reuse")
-                        setAirportData(countLimited)
+                    const response = await searchAirport(searchValue)
+                    if(response?.status){
+                        const filtered = response.data.map((single:{name:string})=>single.name).filter((location:string)=>location !== otherLocation)
+                        setAirportData(filtered)
                     }
                 } catch (error) {
                     console.error("Error fetching data:", error);

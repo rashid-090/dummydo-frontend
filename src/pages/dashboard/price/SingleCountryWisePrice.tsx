@@ -9,10 +9,14 @@ interface PriceInterface{
         _id:string,
         countryName:string,
         currencySymbol:string,
-        baseRate:number,
+        oneWayRate:number,
+        oneWayUrgentRate:number,
+        oneWayHotelRate:number,
+        oneWayUrgentHotelRate:number,
         roundTripRate:number,
-        fastProcessSurCharge:number,
-        flightWithHotelSurCharge:number
+        roundTripUrgentRate:number,
+        roundTripHotelRate:number,
+        roundTripUrgentHotelRate:number
     },
     priceModalHandler:(value: any)=>void,
     deleteModalHandler:(value: any)=>void,
@@ -25,10 +29,14 @@ const SingleCountryWisePrice:React.FC<PriceInterface> = ({index,price,priceModal
             <TableCell><div className='text-center'>{index+1}</div></TableCell>
             <TableCell><div className='text-left capitalize'>{price.countryName}</div></TableCell>
             <TableCell><div className='text-center'>{price.currencySymbol}</div></TableCell>
-            <TableCell><div className='text-center'>{price.baseRate}</div></TableCell>
+            <TableCell><div className='text-center'>{price.oneWayRate}</div></TableCell>
+            <TableCell><div className='text-center'>{price.oneWayUrgentRate}</div></TableCell>
+            <TableCell><div className='text-center'>{price.oneWayHotelRate}</div></TableCell>
+            <TableCell><div className='text-center'>{price.oneWayUrgentHotelRate}</div></TableCell>
             <TableCell><div className='text-center'>{price.roundTripRate}</div></TableCell>
-            <TableCell><div className='text-center'>{price.fastProcessSurCharge}</div></TableCell>
-            <TableCell><div className='text-center'>{price.flightWithHotelSurCharge}</div></TableCell>
+            <TableCell><div className='text-center'>{price.roundTripUrgentRate}</div></TableCell>
+            <TableCell><div className='text-center'>{price.roundTripHotelRate}</div></TableCell>
+            <TableCell><div className='text-center'>{price.roundTripUrgentHotelRate}</div></TableCell>
             <TableCell>
                 <div className='flex justify-center gap-2 items-center'>
                     <button onClick={()=>priceModalHandler(price)} className="cursor-pointer bg-main px-5 py-1 rounded-sm text-white hover:bg-green-600">Update</button>
